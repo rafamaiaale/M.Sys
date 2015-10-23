@@ -91,6 +91,6 @@ input:focus::-webkit-input-placeholder {
     color:rgba(255,255,255,.8);
     font-family: 'Roboto', sans-serif;
     position: absolute;
-    bottom: 230px;
+    top: 700px;
     right: 574px;
 }
