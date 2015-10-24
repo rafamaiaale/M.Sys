@@ -1,10 +1,12 @@
 CREATE TABLE Produto (
 
 	ID_Produto INT IDENTITY(1,1) Primary Key NOT NULL,
-	Nome_Produto VARCHAR(255)NOT NULL, 
-	Tipo_Produto VARCHAR(45) NOT NULL,
+	Cod_Produto int NOT NULL,
+	Nome_Produto varchar(255)NOT NULL, 
+	Tipo_Produto varchar(45) NOT NULL,
 	Data_Produto date NOT NULL,
-	Cor_Produto VARCHAR(20) NOT NULL,
+	Cor_Produto varchar(20) NOT NULL,
+	Valor_Produto Money NOT NULL,
 	Desc_Produto VARCHAR(1000) NOT NULL,
 	Marca_Produto VARCHAR(100) NOT NULL,      
 	Modelo_Produto VARCHAR(100) NOT NULL
@@ -14,9 +16,9 @@ CREATE TABLE Produto (
 CREATE TABLE Funcionario (
 
 	ID_Funcionario INT IDENTITY(1,1) Primary Key NOT NULL,
-	Nome_Funcionario VARCHAR(100)NOT NULL, 
-	Login_Funcionario VARCHAR(45) NOT NULL,
-	Senha_Funcionario VARCHAR(45) NOT NULL,
+	Nome_Funcionario varchar(100)NOT NULL, 
+	Login_Funcionario varchar(45) NOT NULL,
+	Senha_Funcionario varchar(45) NOT NULL,
 	Cargo_Funcionario VARCHAR(20) NOT NULL,
 	Email_Funcionario VARCHAR(100) NOT NULL,
     Filial_Funcionario CHAR(2) NOT NULL,
@@ -39,5 +41,16 @@ CREATE TABLE Vendas (
 	CONSTRAINT FK_Funcionario FOREIGN KEY (ID_Funcionario)
 	References Funcionario(ID_Funcionario)
 )
+
+
+
+INSERT INTO Funcionario
+values ('Lia', 'liashiroma', '12345', 'Gerente', 'lia.shiroma@hotmail.com', 'SP', '1', 'T.I')
+
+INSERT INTO Produto
+values ('Violão Giannini GSF1R', 'Cordas', '01/05/2000', 'Preto', 150,00, 'Giannini', 'Violão')
+
+INSERT INTO Vendas
+values ('24/10/2015', 200,00, 1, 1)
 
 
