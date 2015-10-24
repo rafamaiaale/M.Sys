@@ -1,0 +1,43 @@
+CREATE TABLE Produto (
+
+	ID_Produto INT IDENTITY(1,1) Primary Key NOT NULL,
+	Nome_Produto VARCHAR(255)NOT NULL, 
+	Tipo_Produto VARCHAR(45) NOT NULL,
+	Data_Produto date NOT NULL,
+	Cor_Produto VARCHAR(20) NOT NULL,
+	Desc_Produto VARCHAR(1000) NOT NULL,
+	Marca_Produto VARCHAR(100) NOT NULL,      
+	Modelo_Produto VARCHAR(100) NOT NULL
+
+)
+
+CREATE TABLE Funcionario (
+
+	ID_Funcionario INT IDENTITY(1,1) Primary Key NOT NULL,
+	Nome_Funcionario VARCHAR(100)NOT NULL, 
+	Login_Funcionario VARCHAR(45) NOT NULL,
+	Senha_Funcionario VARCHAR(45) NOT NULL,
+	Cargo_Funcionario VARCHAR(20) NOT NULL,
+	Email_Funcionario VARCHAR(100) NOT NULL,
+    Filial_Funcionario CHAR(2) NOT NULL,
+    Situacao_Funcionario CHAR(1) NOT NULL,
+    Perfil_Funcionario CHAR(3) NOT NULL
+
+)
+
+CREATE TABLE Vendas (
+
+	ID_Vendas INT IDENTITY(1,1) Primary Key NOT NULL,
+	Data_Vendas date NOT NULL,
+	Valor_Vendas DECIMAL(12,2) NOT NULL,
+	ID_Produto int NOT NULL,
+	ID_Funcionario int NOT NULL,
+
+	CONSTRAINT FK_Produto FOREIGN KEY (ID_Produto)
+	References Produto(ID_Produto),
+
+	CONSTRAINT FK_Funcionario FOREIGN KEY (ID_Funcionario)
+	References Funcionario(ID_Funcionario)
+)
+
+
