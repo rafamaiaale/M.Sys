@@ -6,8 +6,7 @@
     font-family: 'entypo', sans-serif;
 }
 
-*,
-*:before, *:after {
+*,*:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; 
@@ -17,7 +16,7 @@
 h2 {
     color:rgba(255,255,255,.8);
     margin-left:12px;
-    
+
 }
 
 body {
@@ -89,8 +88,9 @@ input:focus::-webkit-input-placeholder {
 
 .rodape{
     color:rgba(255,255,255,.8);
-    font-family: 'Roboto', sans-serif;
     position: absolute;
-    top: 700px;
-    right: 574px;
+    width: auto;
+    height: auto; 
+    top: 90%;
+    left: 40%;
 }

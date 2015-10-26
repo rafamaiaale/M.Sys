@@ -1,0 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    background: #272125;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+form {
+    position:relative;
+    margin: 50px auto;
+    top: 100px;
+    width: auto;
+    height: auto;
+  
+}
+
+button {
+    float:right;
+    height: 33px;
+    width: 102px;
+    border: 0px;
+    background: #e74c3c;
+    border-radius:7px;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    margin: 6px;
+}
+
+
+fieldset, legend{
+    color: rgba(255,255,255,.8);
+}
+
+label{
+    color: white;
+}
+
+input,select{
+    padding: 12px;
+    border-radius:7px;
+    border:0px;
+    background: rgba(255,255,255,.2);
+    display: block;
+    margin: 12px;
+    width: 300px;  
+    height: 40px;
+    color:white;
+    font-size:18px;   
+}
+
+#status{
+    background: red;
+    width: 20px;
+    height: 20px;
+}
+
+select{
+    padding: 9px;
+}
+
+select:focus{
+    color: #e74c3c;
+}
+
+input:focus {
+    outline-color: rgba(0,0,0,0);
+    background: rgba(255,255,255,.95);
+    color: #e74c3c;
+}

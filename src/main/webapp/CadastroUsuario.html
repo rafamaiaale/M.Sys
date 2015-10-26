@@ -3,24 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vendas</title>		
+        <link href="styleCU.css" rel="stylesheet" type="text/css"/>
+        <title>Gestão de Usuários</title>		
     </head>
     <body>
         <form action="" method="post">
             <fieldset>
-                <legend>Buscar venda</legend> 
+                <legend><b>Pesquisar Usuário</b></legend>
                 <div>
                     <input type="text" id="usuario" name="user" placeholder="Pesquisar Usuário">
-                    <button type="submit">Pesquisar</button>
                 </div>
             </fieldset>
+            <button type="submit">Pesquisar</button>
         </form>
         <form action="" method="post">
             <fieldset>
-                <legend>Cadastro de Venda</legend>
+                <legend><b>Cadastro de Usuário</b></legend>
                 <div>
                     <label for="nome"><b>Nome do Usuário</b></label>
-                    <input type="text" id="nome" name="name" disabled/>
+                    <input type="text" id="nome" name="name"/>
                 </div>
                 <div>
                     <label for="login"><b>Login</b></label>
@@ -35,10 +36,23 @@
                     <input type="email" id="email" name="email" />
                 </div>
 
-            </fieldset>
+                <div>
+                    <label><b>Ativo</b></label>
+                    <input type="checkbox" id="status" value="Ativo" checked="checked" title="Ativo"/>
+                </div>
 
-            <button type="submit">Salvar</button>
-            <button type="submit">Voltar</button>
+                <div>
+                    <select name="perfil">
+                        <option value="default" selected="selected">Selecione</option>
+                        <option value="T.I">T.I</option>
+                        <option value="PROD" >Produtos</option>
+                        <option value="COM">Comercial</option>
+                    </select>
+                </div>
+            </fieldset><p></p>
+
+            <button id="salvar" type="submit">Salvar</button>
+            <button id="voltar" type="submit">Voltar</button>
         </form>
     </body>
 </html>
