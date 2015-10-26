@@ -24,7 +24,7 @@ public class Produto {
         this.Marca_Produto = Marca_Produto;
         this.Modelo_Produto = Modelo_Produto;
     }
-    
+
     private int ID_Produto;
     private int Cod_Produto;
     private String Nome_Produto;
@@ -34,6 +34,9 @@ public class Produto {
     private double Valor_Produto;
     private String Marca_Produto;
     private String Modelo_Produto;
+
+    public Produto() {
+    }
 
     public int getID_Produto() {
         return ID_Produto;
@@ -106,5 +109,5 @@ public class Produto {
     public void setModelo_Produto(String Modelo_Produto) {
         this.Modelo_Produto = Modelo_Produto;
     }
-    
+
 }

@@ -13,6 +13,9 @@ CREATE TABLE Produto (
 
 )
 
+INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Data_Produto, Cor_Produto, Valor_Produto, Desc_Produto, Marca_Produto, Modelo_Produto)
+values ('Violão Giannini GSF1R', 'Cordas', '01/05/2000', 'Preto', 150,00, 'Giannini', 'Violão')
+
 CREATE TABLE Funcionario (
 
 	ID_Funcionario INT IDENTITY(1,1) Primary Key NOT NULL,
