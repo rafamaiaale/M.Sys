@@ -8,7 +8,6 @@ package br.senac.tads.pi3.codecompass.msys.DAO;
 import java.util.List;
 
 /**
- *
  * @author rafael.malexandre
  */
 public interface GenericDAO {
