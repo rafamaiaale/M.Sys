@@ -3,20 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styleCU.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="refresh" content="7"/> <!--PARA TESTE--> 
         <title>Gestão de Usuários</title>		
     </head>
     <body>
-        <form action="" method="post">
+        <form class="pesquisa" action="" method="post">
             <fieldset>
                 <legend><b>Pesquisar Usuário</b></legend>
                 <div>
                     <input type="text" id="usuario" name="user" placeholder="Pesquisar Usuário">
                 </div>
             </fieldset>
-            <button type="submit">Pesquisar</button>
+            <button id="btP" type="submit">Pesquisar</button>
         </form>
-        <form action="" method="post">
+        <form class="cadastro" action="" method="post">
             <fieldset>
                 <legend><b>Cadastro de Usuário</b></legend>
                 <div>
@@ -51,8 +52,8 @@
                 </div>
             </fieldset><p></p>
 
-            <button id="salvar" type="submit">Salvar</button>
-            <button id="voltar" type="submit">Voltar</button>
+            <button id="btS" type="submit">Salvar</button>
+            <button id="btV" type="submit">Voltar</button>
         </form>
     </body>
 </html>
