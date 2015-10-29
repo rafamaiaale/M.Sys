@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <meta http-equiv="refresh" content="7"/> <!--PARA TESTE--> 
+        <meta http-equiv="refresh" content="25"/> <!--PARA TESTE--> 
         <title>Gestão de Produtos</title>		
     </head>
     <body>
@@ -17,9 +17,11 @@
             </fieldset>
             <button id="btP" type="submit">Pesquisar</button>
         </form>
+        
         <form class="cadastro" action="" method="post">
             <fieldset>
                 <legend><b>Cadastro de Produto</b></legend>
+                <div id="esquerda">
                 <div>
                     <label for="codP"><b>Código do Produto</b></label>
                     <input type="text" id="codP" name="codP"/>
@@ -46,6 +48,8 @@
                         <option value="tecla">Teclas</option>
                     </select>
                 </div>
+                </div>
+                <div id="direita">
                 <div>
                     <label for="cor"><b>Cor</b></label>
                     <input type="text" id="corP" name="corP" />
@@ -66,6 +70,7 @@
                     <label for="ativo"><b>Ativo</b></label>
                     <input type="checkbox" id="status" value="Ativo" checked="checked" name="doc"/>
                 </div>
+                    </div>
             </fieldset><p></p>
             <button id="btS" type="submit">Salvar</button>
             <button id="btV" type="submit">Voltar</button>
