@@ -33,7 +33,7 @@ public class ProdutoDAO implements GenericDAO {
     public Boolean cadastrar(Object object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
-        String sql = "INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Data_Produto, Cor_Produto, Valor_Produto, Marca_Produto, Modelo_Produto)\n"
+        String sql = "INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Cor_Produto, Valor_Produto, Marca_Produto, Modelo_Produto)\n"
                 + "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
@@ -41,11 +41,11 @@ public class ProdutoDAO implements GenericDAO {
             stmt.setInt(1, produto.getCod_Produto());
             stmt.setString(2, produto.getNome_Produto());
             stmt.setString(3, produto.getTipo_Produto());
-            stmt.setDate(4, produto.getData_Produto());
-            stmt.setString(5, produto.getCor_Produto());
-            stmt.setDouble(6, produto.getValor_Produto());
-            stmt.setString(7, produto.getMarca_Produto());
-            stmt.setString(8, produto.getModelo_Produto());
+            stmt.setString(4, produto.getCor_Produto());
+            stmt.setDouble(5, produto.getValor_Produto());
+            stmt.setString(6, produto.getMarca_Produto());
+            stmt.setString(7, produto.getModelo_Produto());
+            stmt.setInt(8, produto.getQnt_Produto());
             stmt.execute();
             return true;
         } catch (SQLException ex) {
@@ -80,11 +80,11 @@ public class ProdutoDAO implements GenericDAO {
                 produto.setID_Produto(rs.getInt("ID_Produto"));
                 produto.setNome_Produto(rs.getString("Nome_Produto"));
                 produto.setTipo_Produto(rs.getString("Tipo_Produto"));
-                produto.setData_Produto(rs.getDate("Data_Produto"));
                 produto.setCor_Produto(rs.getString("Cor_Produto"));
                 produto.setValor_Produto(rs.getDouble("Valor_Produto"));
                 produto.setMarca_Produto(rs.getString("Marca_Produto"));
                 produto.setModelo_Produto(rs.getString("Modelo_Produto"));
+                produto.setQnt_Produto(rs.getInt("Qnt_Produto"));
 
                 resultado.add(produto);
 
@@ -106,10 +106,10 @@ public class ProdutoDAO implements GenericDAO {
     }
 
     @Override
-    public Boolean alterar(Object object, int Id_Produto) {
+    public Boolean alterar(Object object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
-        String sql = "update produto set Nome_Produto=?, Tipo_Produto=?, Data_Produto=?, Cor_Produto=?, Valor__Produto=?, Marca__Produto=?, Modelo__Produto=? where " + Id_Produto;
+        String sql = "update produto set Nome_Produto=?, Tipo_Produto=?, Data_Produto=?, Cor_Produto=?, Valor__Produto=?, Marca__Produto=?, Modelo__Produto=? where ID_Produto=?;" ;
 
         try {
             stmt = conn.prepareStatement(sql);
@@ -117,11 +117,11 @@ public class ProdutoDAO implements GenericDAO {
             stmt.setInt(1, produto.getCod_Produto());
             stmt.setString(2, produto.getNome_Produto());
             stmt.setString(3, produto.getTipo_Produto());
-            stmt.setDate(4, produto.getData_Produto());
-            stmt.setString(5, produto.getCor_Produto());
-            stmt.setDouble(6, produto.getValor_Produto());
-            stmt.setString(7, produto.getMarca_Produto());
-            stmt.setString(8, produto.getModelo_Produto());
+            stmt.setString(4, produto.getCor_Produto());
+            stmt.setDouble(5, produto.getValor_Produto());
+            stmt.setString(6, produto.getMarca_Produto());
+            stmt.setString(7, produto.getModelo_Produto());
+            stmt.setInt(7, produto.getQnt_Produto());
             
             
             stmt.executeUpdate();

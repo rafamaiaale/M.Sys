@@ -4,17 +4,17 @@ CREATE TABLE Produto (
 	Cod_Produto int NOT NULL,
 	Nome_Produto varchar(255)NOT NULL, 
 	Tipo_Produto varchar(45) NOT NULL,
-	Data_Produto date NOT NULL,
 	Cor_Produto varchar(20) NOT NULL,
 	Valor_Produto Money NOT NULL,
 	Desc_Produto VARCHAR(1000) NOT NULL,
 	Marca_Produto VARCHAR(100) NOT NULL,      
-	Modelo_Produto VARCHAR(100) NOT NULL
+	Modelo_Produto VARCHAR(100) NOT NULL,
+        Qnt_Produto int NOT NULL
 
 )
 
-INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Data_Produto, Cor_Produto, Valor_Produto, Desc_Produto, Marca_Produto, Modelo_Produto)
-values ('Violão Giannini GSF1R', 'Cordas', '01/05/2000', 'Preto', 150,00, 'Giannini', 'Violão')
+INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Data_Produto, Cor_Produto, Valor_Produto, Desc_Produto, Marca_Produto, Modelo_Produto, Qnt_Produto)
+values ('Violão Giannini GSF1R', 'Cordas', 'Preto', 150,00, 'Giannini', 'Violão', 10)
 
 CREATE TABLE Funcionario (
 
@@ -24,9 +24,9 @@ CREATE TABLE Funcionario (
 	Senha_Funcionario varchar(45) NOT NULL,
 	Cargo_Funcionario VARCHAR(20) NOT NULL,
 	Email_Funcionario VARCHAR(100) NOT NULL,
-    Filial_Funcionario CHAR(2) NOT NULL,
-    Situacao_Funcionario CHAR(1) NOT NULL,
-    Perfil_Funcionario CHAR(3) NOT NULL
+        Filial_Funcionario CHAR(2) NOT NULL,
+        Situacao_Funcionario CHAR(1) NOT NULL,
+        Perfil_Funcionario CHAR(3) NOT NULL
 
 )
 
@@ -57,3 +57,24 @@ INSERT INTO Vendas
 values ('24/10/2015', 200,00, 1, 1)
 
 
+
+
+
+
+
+
+
+
+// CONFIGURAÇÃO PARA USARMOS SQL SERVER - SQL SERVER POM
+
+EXECUTAR ESTE COMANDO NO TERMINAL: 
+mvn install:install-file -Dfile=sqljdbc4.jar -Dpackaging=jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0
+
+
+EM SEGUIDA ACRESCENTAR NO POM
+
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>sqljdbc4</artifactId>
+    <version>4.0</version>
+</dependency>

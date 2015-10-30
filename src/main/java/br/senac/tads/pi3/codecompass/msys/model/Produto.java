@@ -13,27 +13,16 @@ import java.sql.Date;
  */
 public class Produto {
 
-    public Produto(int ID_Produto, int Cod_Produto, String Nome_Produto, String Tipo_Produto, Date Data_Produto, String Cor_Produto, double Valor_Produto, String Marca_Produto, String Modelo_Produto) {
-        this.ID_Produto = ID_Produto;
-        this.Cod_Produto = Cod_Produto;
-        this.Nome_Produto = Nome_Produto;
-        this.Tipo_Produto = Tipo_Produto;
-        this.Data_Produto = Data_Produto;
-        this.Cor_Produto = Cor_Produto;
-        this.Valor_Produto = Valor_Produto;
-        this.Marca_Produto = Marca_Produto;
-        this.Modelo_Produto = Modelo_Produto;
-    }
-
     private int ID_Produto;
     private int Cod_Produto;
     private String Nome_Produto;
+    private String Fabricante_Produto;
     private String Tipo_Produto;
-    private Date Data_Produto;
     private String Cor_Produto;
     private double Valor_Produto;
     private String Marca_Produto;
     private String Modelo_Produto;
+    private int qnt_Produto;
 
     public Produto() {
     }
@@ -70,14 +59,6 @@ public class Produto {
         this.Tipo_Produto = Tipo_Produto;
     }
 
-    public Date getData_Produto() {
-        return Data_Produto;
-    }
-
-    public void setData_Produto(Date Data_Produto) {
-        this.Data_Produto = Data_Produto;
-    }
-
     public String getCor_Produto() {
         return Cor_Produto;
     }
@@ -108,6 +89,22 @@ public class Produto {
 
     public void setModelo_Produto(String Modelo_Produto) {
         this.Modelo_Produto = Modelo_Produto;
+    }
+
+    public int getQnt_Produto() {
+        return qnt_Produto;
+    }
+
+    public void setQnt_Produto(int qnt_Produto) {
+        this.qnt_Produto = qnt_Produto;
+    }
+
+    public String getFabricante_Produto() {
+        return Fabricante_Produto;
+    }
+
+    public void setFabricante_Produto(String Fabricante_Produto) {
+        this.Fabricante_Produto = Fabricante_Produto;
     }
 
 }
