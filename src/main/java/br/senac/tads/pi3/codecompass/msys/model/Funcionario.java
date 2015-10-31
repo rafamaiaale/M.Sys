@@ -9,9 +9,12 @@ package br.senac.tads.pi3.codecompass.msys.model;
  *
  * @author ricardo.oliveira5
  */
-public abstract class Funcionario {
+public class Funcionario {
 
-    public Funcionario(String Nome_Funcionario, String Login_Funcionario, String Senha_Funcionario, String Cargo_Funcionario, String Email_Funcionario, String Filial_Funcionario, int Situacao_Funcionario) {
+    public Funcionario() {
+    }
+
+    public Funcionario(String Nome_Funcionario, String Login_Funcionario, String Senha_Funcionario, String Cargo_Funcionario, String Email_Funcionario, String Filial_Funcionario, int Situacao_Funcionario, String Perfil_Funcionario) {
         this.Nome_Funcionario = Nome_Funcionario;
         this.Login_Funcionario = Login_Funcionario;
         this.Senha_Funcionario = Senha_Funcionario;
@@ -19,8 +22,9 @@ public abstract class Funcionario {
         this.Email_Funcionario = Email_Funcionario;
         this.Filial_Funcionario = Filial_Funcionario;
         this.Situacao_Funcionario = Situacao_Funcionario;
+        this.Perfil_Funcionario = Perfil_Funcionario;
     }
-    
+
     private int ID_Funcionario;
     private String Nome_Funcionario;
     private String Login_Funcionario;
@@ -29,6 +33,9 @@ public abstract class Funcionario {
     private String Email_Funcionario;
     private String Filial_Funcionario;
     private int Situacao_Funcionario;
+    private String Perfil_Funcionario;
+
+    
 
     public int getID_Funcionario() {
         return ID_Funcionario;
@@ -62,6 +69,10 @@ public abstract class Funcionario {
         return Situacao_Funcionario;
     }
 
+    public String getPerfil_Funcionario() {
+        return Perfil_Funcionario;
+    }
+
     public void setID_Funcionario(int ID_Funcionario) {
         this.ID_Funcionario = ID_Funcionario;
     }
@@ -93,5 +104,9 @@ public abstract class Funcionario {
     public void setSituacao_Funcionario(int Situacao_Funcionario) {
         this.Situacao_Funcionario = Situacao_Funcionario;
     }
-    
+
+    public void setPerfil_Funcionario(String Perfil_Funcionario) {
+        this.Perfil_Funcionario = Perfil_Funcionario;
+    }
+
 }

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ProdutoDAO implements GenericDAO {
+public class ProdutoDAO implements GenericDAO<Produto> {
 
     private Connection conn;
 
@@ -30,7 +30,7 @@ public class ProdutoDAO implements GenericDAO {
     }
 
     @Override
-    public Boolean cadastrar(Object object) {
+    public Boolean cadastrar(Produto object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
         String sql = "INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Cor_Produto, Valor_Produto, Marca_Produto, Modelo_Produto)\n"
@@ -63,8 +63,8 @@ public class ProdutoDAO implements GenericDAO {
     }
 
     @Override
-    public List<Object> listar() {
-        List<Object> resultado = new ArrayList<Object>();
+    public List<Produto> listar() {
+        List<Produto> resultado = new ArrayList<Produto>();
         PreparedStatement stmt = null;
         ResultSet rs = null; //rs=coluna do banco
 
@@ -106,7 +106,7 @@ public class ProdutoDAO implements GenericDAO {
     }
 
     @Override
-    public Boolean alterar(Object object) {
+    public Boolean alterar(Produto object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
         String sql = "update produto set Nome_Produto=?, Tipo_Produto=?, Data_Produto=?, Cor_Produto=?, Valor__Produto=?, Marca__Produto=?, Modelo__Produto=? where ID_Produto=?;" ;

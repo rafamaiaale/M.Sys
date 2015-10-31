@@ -10,10 +10,10 @@ import java.util.List;
 /**
  * @author rafael.malexandre
  */
-public interface GenericDAO {
-    public Boolean cadastrar(Object object);
-    public List<Object> listar();
+public interface GenericDAO<T> {
+    public Boolean cadastrar(T object);
+    public List<T> listar();
 //    public void excluir(int idObject);
 //    public Object carregar(int idObject);
-    public Boolean alterar(Object object);
+    public Boolean alterar(T object);
 }
