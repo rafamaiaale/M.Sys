@@ -33,8 +33,8 @@ public class ProdutoDAO implements GenericDAO<Produto> {
     public Boolean cadastrar(Produto object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
-        String sql = "INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Cor_Produto, Valor_Produto, Marca_Produto, Modelo_Produto)\n"
-                + "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Cor_Produto, Valor_Produto, Fabricante_Produto, Modelo_Produto, Qnt_Produto)\n"
+                + "values (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             stmt = conn.prepareStatement(sql);
@@ -43,7 +43,7 @@ public class ProdutoDAO implements GenericDAO<Produto> {
             stmt.setString(3, produto.getTipo_Produto());
             stmt.setString(4, produto.getCor_Produto());
             stmt.setDouble(5, produto.getValor_Produto());
-            stmt.setString(6, produto.getMarca_Produto());
+            stmt.setString(6, produto.getFabricante_Produto());
             stmt.setString(7, produto.getModelo_Produto());
             stmt.setInt(8, produto.getQnt_Produto());
             stmt.execute();
@@ -82,7 +82,7 @@ public class ProdutoDAO implements GenericDAO<Produto> {
                 produto.setTipo_Produto(rs.getString("Tipo_Produto"));
                 produto.setCor_Produto(rs.getString("Cor_Produto"));
                 produto.setValor_Produto(rs.getDouble("Valor_Produto"));
-                produto.setMarca_Produto(rs.getString("Marca_Produto"));
+                produto.setFabricante_Produto(rs.getString("Fabricante_Produto"));
                 produto.setModelo_Produto(rs.getString("Modelo_Produto"));
                 produto.setQnt_Produto(rs.getInt("Qnt_Produto"));
 
@@ -119,7 +119,7 @@ public class ProdutoDAO implements GenericDAO<Produto> {
             stmt.setString(3, produto.getTipo_Produto());
             stmt.setString(4, produto.getCor_Produto());
             stmt.setDouble(5, produto.getValor_Produto());
-            stmt.setString(6, produto.getMarca_Produto());
+            stmt.setString(6, produto.getFabricante_Produto());
             stmt.setString(7, produto.getModelo_Produto());
             stmt.setInt(7, produto.getQnt_Produto());
             

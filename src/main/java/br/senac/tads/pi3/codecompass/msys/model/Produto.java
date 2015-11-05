@@ -20,7 +20,6 @@ public class Produto {
     private String Tipo_Produto;
     private String Cor_Produto;
     private double Valor_Produto;
-    private String Marca_Produto;
     private String Modelo_Produto;
     private int qnt_Produto;
 
@@ -73,14 +72,6 @@ public class Produto {
 
     public void setValor_Produto(double Valor_Produto) {
         this.Valor_Produto = Valor_Produto;
-    }
-
-    public String getMarca_Produto() {
-        return Marca_Produto;
-    }
-
-    public void setMarca_Produto(String Marca_Produto) {
-        this.Marca_Produto = Marca_Produto;
     }
 
     public String getModelo_Produto() {
