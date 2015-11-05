@@ -6,6 +6,34 @@ body{ /*Padronizados*/
     font-family: 'Roboto', sans-serif;
 }
 
+#logo{
+    position: absolute;
+    width: 150px;
+    height: auto;
+}
+
+#sair {
+    position: absolute;
+    right: 10px;
+}
+
+
+
+#cadastro{
+    position: relative;
+    left: 80px;
+    top: 40%;
+    text-decoration: none;
+    color:white;
+}
+
+#gestao{
+    position: relative;    
+    left: 350px;
+    top: 40%;
+    text-decoration: none;
+    color:white;
+}
 form{ /*FORMs padronizados*/
     position:relative;
     margin: 50px auto;
@@ -47,7 +75,7 @@ h2{
     margin-left:12px;
 }
 
-button{ /*Padronização dos botões*/
+button, #bmenu{ /*Padronização dos botões*/
     float:right;
     height: 121px;
     width: 50px;
@@ -57,6 +85,14 @@ button{ /*Padronização dos botões*/
     padding: 10px;
     color:white;
     font-size:22px;
+}
+
+#bmenu{
+    position: absolute;
+    left: 15%;
+    top: 200px;
+    height: 100px;
+    width: 800px;
 }
 
 #btP, #btS, #btV{ /*btP = Pesquisa, btS = Salvar, btV = Voltar*/
