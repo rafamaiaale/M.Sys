@@ -66,7 +66,7 @@
                 </div>
             </fieldset><p></p>
             <button id="btS" type="submit">Salvar</button>
-            <button id="btV" type="submit">Voltar</button>
+            <button id="btV" type="submit" onClick="history.go(-1)">Voltar</button>
         </form>
     </body>
 </html>

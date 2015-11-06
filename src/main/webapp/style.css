@@ -6,7 +6,6 @@ body{ /*Padronizados*/
     font-family: 'Roboto', sans-serif;
 }
 
-
 form{ /*FORMs padronizados*/
     position:relative;
     margin: 50px auto;
@@ -154,58 +153,51 @@ select:focus{ /*Foco em todos os SELECt's*/
 }
 
 /*MENU*/
-
 #bcadastro{
-        font-size: 16px;
-	font-family: sans-serif;
-	text-decoration: none;
-	position: absolute;
-	left: 15%;
-	top: 30%;
-	padding: 10px;
-        width: 170px;
-        height: 40px;
-	
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    padding: 10px;
+    width: 170px;
+    height: 40px;
 }
 
 #bgestao{
-        font-size: 16px;
-	font-family: sans-serif;
-	text-decoration: none;
-	position: absolute;
-	left: 15%;
-	top: 55%;
-	padding: 10px;
-        width: 170px;
-        height: 40px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    position: absolute;
+    left: 15%;
+    top: 55%;
+    padding: 10px;
+    width: 170px;
+    height: 40px;
 }
 
 #cssmenu {
-
-	position: absolute;
-	width: 95%;
-	height: 60%;
-	bottom: 15%;
-	left: 2%;
-	border-radius: 3px;
-	border:4px inset #ffffff;
-
-	
+    position: absolute;
+    width: 95%;
+    height: 60%;
+    bottom: 15%;
+    left: 2%;
+    border-radius: 3px;
+    border:4px inset #ffffff;
 }
 
 h2 {
-	color: white;
-	font-size: 30px;
-	left: 20%;
+    color: white;
+    font-size: 30px;
+    left: 20%;
 }
 
 #sair {
     position: absolute;
     right: 2%;
-	top: 2%;
-	
+    top: 2%;
 }
-
 
 .rodape{ /*FOOTER da tela de login*/
     color:rgba(255,255,255,.8);

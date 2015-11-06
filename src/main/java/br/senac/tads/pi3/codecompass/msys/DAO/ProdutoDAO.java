@@ -109,11 +109,11 @@ public class ProdutoDAO implements GenericDAO<Produto> {
     public Boolean alterar(Produto object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
-        String sql = "update produto set Nome_Produto=?, Tipo_Produto=?, Data_Produto=?, Cor_Produto=?, Valor__Produto=?, Marca__Produto=?, Modelo__Produto=? where ID_Produto=?;" ;
+        String sql = "update produto set Nome_Produto=?, Tipo_Produto=?, Data_Produto=?, Cor_Produto=?, Valor__Produto=?, Marca__Produto=?, Modelo__Produto=? where ID_Produto=?;";
 
         try {
             stmt = conn.prepareStatement(sql);
-            
+
             stmt.setInt(1, produto.getCod_Produto());
             stmt.setString(2, produto.getNome_Produto());
             stmt.setString(3, produto.getTipo_Produto());
@@ -122,11 +122,10 @@ public class ProdutoDAO implements GenericDAO<Produto> {
             stmt.setString(6, produto.getFabricante_Produto());
             stmt.setString(7, produto.getModelo_Produto());
             stmt.setInt(7, produto.getQnt_Produto());
-            
-            
+
             stmt.executeUpdate();
             return true;
-            
+
         } catch (SQLException ex) {
             System.out.println("Problemas ao alterar Produto! Erro: " + ex.getMessage());
             ex.printStackTrace();
