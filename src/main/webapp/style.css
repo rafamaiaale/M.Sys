@@ -6,34 +6,7 @@ body{ /*Padronizados*/
     font-family: 'Roboto', sans-serif;
 }
 
-#logo{
-    position: absolute;
-    width: 150px;
-    height: auto;
-}
 
-#sair {
-    position: absolute;
-    right: 10px;
-}
-
-
-
-#cadastro{
-    position: relative;
-    left: 80px;
-    top: 40%;
-    text-decoration: none;
-    color:white;
-}
-
-#gestao{
-    position: relative;    
-    left: 350px;
-    top: 40%;
-    text-decoration: none;
-    color:white;
-}
 form{ /*FORMs padronizados*/
     position:relative;
     margin: 50px auto;
@@ -75,7 +48,7 @@ h2{
     margin-left:12px;
 }
 
-button, #bmenu{ /*Padronização dos botões*/
+button, #bcadastro, #bgestao { /*Padronização dos botões*/
     float:right;
     height: 121px;
     width: 50px;
@@ -87,13 +60,6 @@ button, #bmenu{ /*Padronização dos botões*/
     font-size:22px;
 }
 
-#bmenu{
-    position: absolute;
-    left: 15%;
-    top: 200px;
-    height: 100px;
-    width: 800px;
-}
 
 #btP, #btS, #btV{ /*btP = Pesquisa, btS = Salvar, btV = Voltar*/
     float:right;
@@ -177,6 +143,69 @@ select:focus{ /*Foco em todos os SELECt's*/
     width: 20px;
     height: 20px;
 }
+
+.rodape{ /*FOOTER da tela de login*/
+    color:rgba(255,255,255,.8);
+    position: absolute;
+    width: auto;
+    height: auto; 
+    top: 90%;
+    left: 40%;
+}
+
+/*MENU*/
+
+#bcadastro{
+        font-size: 16px;
+	font-family: sans-serif;
+	text-decoration: none;
+	position: absolute;
+	left: 15%;
+	top: 30%;
+	padding: 10px;
+        width: 170px;
+        height: 40px;
+	
+}
+
+#bgestao{
+        font-size: 16px;
+	font-family: sans-serif;
+	text-decoration: none;
+	position: absolute;
+	left: 15%;
+	top: 55%;
+	padding: 10px;
+        width: 170px;
+        height: 40px;
+}
+
+#cssmenu {
+
+	position: absolute;
+	width: 95%;
+	height: 60%;
+	bottom: 15%;
+	left: 2%;
+	border-radius: 3px;
+	border:4px inset #ffffff;
+
+	
+}
+
+h2 {
+	color: white;
+	font-size: 30px;
+	left: 20%;
+}
+
+#sair {
+    position: absolute;
+    right: 2%;
+	top: 2%;
+	
+}
+
 
 .rodape{ /*FOOTER da tela de login*/
     color:rgba(255,255,255,.8);
