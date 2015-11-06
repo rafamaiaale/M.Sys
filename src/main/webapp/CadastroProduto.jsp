@@ -15,7 +15,7 @@
         <title>Gestão de Produtos</title>	
     </head>
     <body>
-        <form class="cadastro" action="" method="post">
+        <form class="cadastro" action="CadastrarProduto" method="post">
             <fieldset>
                 <legend><b>Cadastro de Produto</b></legend>
                 <div id="esquerda">
@@ -50,10 +50,6 @@
                     <div>
                         <label for="cor"><b>Cor</b></label>
                         <input type="text" id="corP" name="corP" />
-                    </div>
-                    <div>
-                        <label for="desc"><b>Descrição</b></label>
-                        <input type="text" id="desP" name="desP" />
                     </div>
                     <div>
                         <label for="val"><b>Valor</b></label>
