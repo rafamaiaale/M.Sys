@@ -1,12 +1,9 @@
-<%-- 
-    Document   : ListaProduto
-    Created on : 30/10/2015, 20:10:59
-    Author     : lucas.dndomingues
---%>
 
-<%@page import="java.util.List"%>
-<%@page import="br.senac.tads.pi3.codecompass.msys.model.Produto"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,32 +24,29 @@
                     <th>Tipo</th>
                     <th>Cor</th>
                     <th>Valor R$</th>
-                    <th>Marca</th>
                     <th>Modelo</th>
                     <th>Quantidade</th>
                 </tr>
             </thead>
             <tbody>
-                <%
-                    List<Produto> produtos = (List<Produto>) request.getAttribute("produtos");
-                    for (Produto produto : produtos) {
-                %>
-                <tr>
-                    <td><%=produto.getID_Produto()%></td>
-                    <td><%=produto.getCod_Produto()%></td>
-                    <td><%=produto.getNome_Produto()%></td>
-                    <td><%=produto.getFabricante_Produto()%></td>
-                    <td><%=produto.getTipo_Produto()%></td>
-                    <td><%=produto.getCor_Produto()%></td>
-                    <td><%=produto.getValor_Produto()%></td>
-                    <td><%=produto.getMarca_Produto()%></td>
-                    <td><%=produto.getModelo_Produto()%></td>
-                    <td><%=produto.getQnt_Produto()%></td>
+                <c:forEach items="${produtos}" var="produto">
+
+                    <tr>
+
+                        <td><c:out value="${produto.ID_Produto}" /></td>
+                        <td><c:out value="${produto.Cod_Produto}" /></td>
+                        <td><c:out value="${produto.Nome_Produto}" /></td>
+                        <td><c:out value="${produto.Fabricante_Produto}" /></td>
+                        <td><c:out value="${produto.Tipo_Produto}" /></td>
+                        <td><c:out value="${produto.Cor_Produto}" /></td>
+                        <td><c:out value="${produto.Valor_Produto}" /></td>
+                        <td><c:out value="${produto.Modelo_Produto}" /></td>
+                        <td><c:out value="${produto.qnt_Produto}" /></td>
 
 
-                    <td align="center"><a href="CarregarProduto?idproduto=<%=produto.getID_Produto()%>">Alterar</a></td>
-                </tr>
-                <% }%>
+                    </tr>
+
+                </c:forEach>
             </tbody>
         </table>
     </body>

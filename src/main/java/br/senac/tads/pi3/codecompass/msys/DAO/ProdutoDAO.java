@@ -78,11 +78,12 @@ public class ProdutoDAO implements GenericDAO<Produto> {
                 Produto produto = new Produto();
 
                 produto.setID_Produto(rs.getInt("ID_Produto"));
+                produto.setCod_Produto(rs.getInt("Cod_Produto"));
                 produto.setNome_Produto(rs.getString("Nome_Produto"));
+                produto.setFabricante_Produto(rs.getString("Fabricante_Produto"));
                 produto.setTipo_Produto(rs.getString("Tipo_Produto"));
                 produto.setCor_Produto(rs.getString("Cor_Produto"));
                 produto.setValor_Produto(rs.getDouble("Valor_Produto"));
-                produto.setFabricante_Produto(rs.getString("Fabricante_Produto"));
                 produto.setModelo_Produto(rs.getString("Modelo_Produto"));
                 produto.setQnt_Produto(rs.getInt("Qnt_Produto"));
 

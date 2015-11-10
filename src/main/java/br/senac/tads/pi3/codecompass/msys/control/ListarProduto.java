@@ -7,8 +7,11 @@ package br.senac.tads.pi3.codecompass.msys.control;
 
 import br.senac.tads.pi3.codecompass.msys.DAO.GenericDAO;
 import br.senac.tads.pi3.codecompass.msys.DAO.ProdutoDAO;
+import br.senac.tads.pi3.codecompass.msys.model.Produto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rafael.malexandre
  */
-@WebServlet(name = "ListarProduto", urlPatterns = {"/ListarProduto"})
+@WebServlet("/ListarProduto")
 public class ListarProduto extends HttpServlet {
 
     /**
@@ -33,18 +36,7 @@ public class ListarProduto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        try{
-            GenericDAO dao = new ProdutoDAO();
-            request.setAttribute("produtos", dao.listar());
-            request.getRequestDispatcher("listarproduto.jsp").forward(request, response);
-        }
-        catch (Exception ex){
-            System.out.println("Problemas ao listar Produto! Erro: " + ex.getMessage());
-            ex.printStackTrace();
-        }
-        
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -60,6 +52,18 @@ public class ListarProduto extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+
+        try {
+            GenericDAO dao = new ProdutoDAO();
+            List<Produto> listaProduto = dao.listar();
+            request.setAttribute("produtos", listaProduto);
+            RequestDispatcher rd = request.getRequestDispatcher("/ListaProduto.jsp");
+            rd.forward(request, response);
+
+        } catch (Exception ex) {
+            System.out.println("Problemas ao listar Produto! Erro: " + ex.getMessage());
+            ex.printStackTrace();
+        }
     }
 
     /**
