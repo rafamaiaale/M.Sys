@@ -11,11 +11,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <!--<meta http-equiv="refresh" content="5"/> PARA TESTE--> 
         <title>Gestão de Usuários</title>
     </head>
     <body>
-        <!--<form class="pesquisa" action="" method="post">
+        <!--<form class="pesquisa" action="" method="post">    PESQUISA
             <fieldset>
                 <legend><b>Pesquisar Usuário</b></legend>
                 <div>
@@ -24,39 +23,42 @@
             </fieldset>
             <button id="btP" type="submit">Pesquisar</button>
         </form>-->
-        <form class="cadastro" action="" method="post">
+        <form class="cadastro" action="CadastroUsuario" method="post">
             <fieldset>
                 <legend><b>Cadastro de Usuário</b></legend>
 
                 <div id="esquerda">
                     <div>
                         <label for="nome"><b>Nome do Usuário</b></label>
-                        <input type="text" id="nome" name="name"/>
+                        <input type="text" class="form-control" id="nome" name="name" maxlength="100" required autofocus/>
                     </div>
                     <div>
                         <label for="login"><b>Login</b></label>
-                        <input type="text" id="login" name="login" />
+                        <input type="text" class="form-control" id="login" name="login" maxlength="45" required/>
                     </div>
                     <div>
                         <label for="senha"><b>Senha</b></label>
-                        <input type="password" id="pass" name="password" />
+                        <input type="password" class="form-control" id="pass" name="password" maxlength="45" minlength="5" required/>
                     </div>
                 </div>
 
                 <div id="direita">
                     <div>
                         <label for="email"><b>E-mail</b></label>
-                        <input type="email" id="email" name="email" />
+                        <input type="email" class="form-control" id="email" name="email" maxlength="100" required/>
                     </div>
-
+                    <div>
+                        <label for="filial"><b>Filial - UF</b></label>
+                        <input type="text" class="form-control" id="filial" maxlength="2" pattern="[A-Z\s]+$" required/>
+                    </div>
                     <div>
                         <label><b>Ativo</b></label>
-                        <input type="checkbox" id="status" value="Ativo" checked="checked" title="Ativo"/>
+                        <input type="checkbox" class="form-control" id="status" value="Ativo" checked="checked" title="Ativo"/>
                     </div>
 
                     <div>
                         <select name="perfil">
-                            <option value="default" selected="selected">Selecione</option>
+                            <option value="default" selected="selected" disabled>Selecione</option>
                             <option value="T.I">T.I</option>
                             <option value="PROD" >Produtos</option>
                             <option value="COM">Comercial</option>
@@ -64,7 +66,7 @@
                     </div>
                 </div>
             </fieldset><p></p>
-
+            <span id="msg" hidden>Cadastro realizado com sucesso!</span>
             <button id="btS" type="submit">Salvar</button>
             <button id="btV" type="submit" onClick="history.go(-1)">Voltar</button>
         </form>
