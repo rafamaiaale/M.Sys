@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,31 +27,29 @@
 
     </head>
     <body>
-        
-         <!-- Sidebar -->
+
+        <!-- Sidebar -->
         <div id="wrapper">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="#">
+                        <a href="MenuProduto.jsp">
                             Menu - Produto
                         </a>
-                    </li>
-                    <li>
-                        <a href="#">Dashboard - Funcionario</a>
                     </li>
                     <li>
                         <a href="CadastroProduto.jsp">Cadastrar Produto</a>
                     </li>
                     <li>
-                        <a href="#">Buscar Produto</a>
+                        <a href="ListaProduto.jsp">Pesquisar Produto</a>
                     </li>
                     <li>
-                        <a href="#">Editar Produto</a>
+                        <a href="#">Atualizar Produto</a>
                     </li>
                     <li>
-                        <a href="#">Deslogar do sistema</a>
+                      <a href="index.jsp">Deslogar do sistema</a>
                     </li>
+
                 </ul>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -60,11 +58,14 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <h1>Simple Sidebar</h1>
-                            <p>Testando menu com bootstrap</p>
-                            <p></code>M.sys | Web Solutions</p>
-                            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Testar Menu</a>
+                        <div class="col-md-12">
+                            <!-- <a href="#menu-toggle" class="btn btn-default glyphicon glyphicon-list" id="menu-toggle"></a> -->
+
+                            <div class="jumbotron">
+                                <h1>Olá, Bem vindo!</h1>
+                                <hr>
+                                <span id="menu-toggle" class="label label-info">M.sys | Web Solutions</span>
+                            </div>
                         </div>
                     </div>
                 </div>
