@@ -34,13 +34,13 @@
                     <tr>
 
                         <td><c:out value="${produto.ID_Produto}" /></td>
-                        <td><c:out value="${produto.Cod_Produto}" /></td>
-                        <td><c:out value="${produto.Nome_Produto}" /></td>
-                        <td><c:out value="${produto.Fabricante_Produto}" /></td>
-                        <td><c:out value="${produto.Tipo_Produto}" /></td>
-                        <td><c:out value="${produto.Cor_Produto}" /></td>
-                        <td><c:out value="${produto.Valor_Produto}" /></td>
-                        <td><c:out value="${produto.Modelo_Produto}" /></td>
+                        <td><c:out value="${produto.cod_Produto}" /></td>
+                        <td><c:out value="${produto.nome_Produto}" /></td>
+                        <td><c:out value="${produto.fabricante_Produto}" /></td>
+                        <td><c:out value="${produto.tipo_Produto}" /></td>
+                        <td><c:out value="${produto.cor_Produto}" /></td>
+                        <td><c:out value="${produto.valor_Produto}" /></td>
+                        <td><c:out value="${produto.modelo_Produto}" /></td>
                         <td><c:out value="${produto.qnt_Produto}" /></td>
 
 
