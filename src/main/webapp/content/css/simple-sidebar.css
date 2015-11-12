@@ -122,4 +122,15 @@
         position: relative;
         margin-right: 0;
     }
+    
+    .alinhamento{
+        margin-top: 100px;
+        padding: 10px;
+        margin-left: 50px;
+    }
+    .alinhamento-button{
+         padding: 10px;
+    }
+    
+    
 }

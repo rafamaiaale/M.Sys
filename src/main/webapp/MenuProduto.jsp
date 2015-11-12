@@ -25,6 +25,8 @@
         <!-- Custom CSS -->
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
 
+        <link href="style.css" rel="stylesheet"> 
+
     </head>
     <body>
 
@@ -33,23 +35,20 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="MenuProduto.jsp">
-                            Menu - Produto
-                        </a>
+                        <a href="MenuProduto.jsp">Menu - Produto</a>
                     </li>
                     <li>
                         <a href="CadastroProduto.jsp">Cadastrar Produto</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Pesquisar Produto</a>
+                        <a href="ListaProduto.jsp">Pesquisar Produto</a>
                     </li>
                     <li>
                         <a href="#">Atualizar Produto</a>
                     </li>
                     <li>
-                      <a href="index.jsp">Deslogar do sistema</a>
+                        <a href="index.jsp">Deslogar do sistema</a>
                     </li>
-
                 </ul>
             </div>
             <!-- /#sidebar-wrapper -->
