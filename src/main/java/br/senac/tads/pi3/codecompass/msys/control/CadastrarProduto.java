@@ -10,6 +10,7 @@ import br.senac.tads.pi3.codecompass.msys.DAO.ProdutoDAO;
 import br.senac.tads.pi3.codecompass.msys.model.Produto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -65,7 +66,8 @@ public class CadastrarProduto extends HttpServlet {
                 mensagem="Problemas ao cadastrar Produto";
             }
             request.setAttribute("mensagem", mensagem);
-            request.getRequestDispatcher("/MenuPrincipal.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/MenuProduto.jsp");
+            rd.forward(request, response);
         }
         catch (Exception ex){
             System.out.println("Problemas no Servlet ao cadastrar produto! Erro: " + ex.getMessage());
