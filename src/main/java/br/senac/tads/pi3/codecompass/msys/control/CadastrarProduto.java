@@ -65,6 +65,7 @@ public class CadastrarProduto extends HttpServlet {
                 mensagem="Problemas ao cadastrar Produto";
             }
             request.setAttribute("mensagem", mensagem);
+            request.getRequestDispatcher("/MenuPrincipal.jsp");
         }
         catch (Exception ex){
             System.out.println("Problemas no Servlet ao cadastrar produto! Erro: " + ex.getMessage());

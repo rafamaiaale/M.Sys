@@ -41,7 +41,7 @@
                         <a href="CadastroProduto.jsp">Cadastrar Produto</a>
                     </li>
                     <li>
-                        <a href="ListaProduto.jsp">Pesquisar Produto</a>
+                        <a href="ListarProduto">Pesquisar Produto</a>
                     </li>
                     <li>
                         <a href="#">Atualizar Produto</a>

@@ -35,7 +35,7 @@
                         <a href="CadastroProduto.jsp">Cadastrar Produto</a>
                     </li>
                     <li>
-                        <a href="ListaProduto.jsp">Pesquisar Produto</a>
+                        <a href="ListarProduto">Pesquisar Produto</a>
                     </li>
                     <li>
                         <a href="#">Atualizar Produto</a>
@@ -53,7 +53,7 @@
                         <h1 class="well">Cadastro de Produto</h1>
                         <div class="col-lg-12 well">
 
-                            <form>
+                            <form action="CadastrarProduto" method="post">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="nomeP"><b>Nome do Produto</b></label>
