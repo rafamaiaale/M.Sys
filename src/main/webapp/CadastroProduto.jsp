@@ -32,13 +32,13 @@
                         <a href="MenuProduto.jsp">Menu - Produto</a>
                     </li>
                     <li>
-                        <a href="CadastroProduto.jsp">Cadastrar Produto</a>
+                        <a href="CadastroProduto.jsp">Cadastrar Produtos</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Pesquisar Produto</a>
+                        <a href="ListarProduto">Listar Produtos</a>
                     </li>
                     <li>
-                        <a href="#">Atualizar Produto</a>
+                        <a href="AlterarProduto.jsp">Atualizar Produtos</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do sistema</a>

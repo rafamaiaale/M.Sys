@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : Menu.jsp
     Created on : 30/10/2015, 20:21:01
     Author     : lucas.dndomingues
@@ -25,7 +25,7 @@
         <!-- Custom CSS -->
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
 
-        <link href="style.css" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
 
     </head>
     <body>
@@ -38,13 +38,13 @@
                         <a href="MenuProduto.jsp">Menu - Produto</a>
                     </li>
                     <li>
-                        <a href="CadastroProduto.jsp">Cadastrar Produto</a>
+                        <a href="CadastroProduto.jsp">Cadastrar Produtos</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Pesquisar Produto</a>
+                        <a href="ListarProduto">Listar Produtos</a>
                     </li>
                     <li>
-                        <a href="#">Atualizar Produto</a>
+                        <a href="AlterarProduto.jsp">Atualizar Produtos</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do sistema</a>
