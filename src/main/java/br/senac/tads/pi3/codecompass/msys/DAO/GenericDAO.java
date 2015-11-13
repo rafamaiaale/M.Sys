@@ -13,6 +13,7 @@ import java.util.List;
 public interface GenericDAO<T> {
     public Boolean cadastrar(T object);
     public List<T> listar();
+    public List<T> buscarPorID(int id);
 //    public void excluir(int idObject);
 //    public Object carregar(int idObject);
     public Boolean alterar(T object);

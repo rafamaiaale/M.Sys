@@ -55,9 +55,9 @@
                     <div class="row">
                         <h1 class="well">Alterar Produtos</h1>
                         <div class="col-md-12">
-                            <form action="" method="post">
+                            <form action="BuscarPorIdProduto" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Buscar Produto" class="form-control search-query">
+                                    <input type="text" name="idP" placeholder="Buscar Produto" class="form-control search-query">
                                 </div>
                                 <div class="col-md-6">
                                     <button type="submit" class="btn btn-info">Pesquisar</button>
@@ -147,11 +147,11 @@
                         </table>
 
 
-                        <form action="CadastrarProduto" method="post">
+                        <form action="AlterarProduto" method="post">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="nomeP"><b>Nome do Produto</b></label>
-                                    <input type="text" class="form-control" id="nomeP" name="nameP" maxlength="255" required/>
+                                    <input type="text" class="form-control" value="${produtos.nome_Produto}" id="nomeP" name="nameP" maxlength="255" required/>
                                 </div>
                                 <div class="row">  
                                     <div class="col-sm-6 form-group">

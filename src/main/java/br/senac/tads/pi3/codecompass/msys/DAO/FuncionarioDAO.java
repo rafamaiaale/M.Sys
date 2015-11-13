@@ -108,6 +108,50 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
         return resultado;
     }
 
+    
+    public List<Funcionario> buscarPorID(int id) {
+        List<Funcionario> resultado = new ArrayList<Funcionario>();
+        PreparedStatement stmt = null;
+        ResultSet rs = null; //rs=coluna do banco
+
+        String sql = "Select * from Produto where ID_Produto = " + id;
+
+        try {
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+//                Funcionario produto = new Funcionario();
+//
+//                produto.setID_Produto(rs.getInt("ID_Produto"));
+//                produto.setCod_Produto(rs.getInt("Cod_Produto"));
+//                produto.setNome_Produto(rs.getString("Nome_Produto"));
+//                produto.setFabricante_Produto(rs.getString("Fabricante_Produto"));
+//                produto.setTipo_Produto(rs.getString("Tipo_Produto"));
+//                produto.setCor_Produto(rs.getString("Cor_Produto"));
+//                produto.setValor_Produto(rs.getDouble("Valor_Produto"));
+//                produto.setModelo_Produto(rs.getString("Modelo_Produto"));
+//                produto.setQnt_Produto(rs.getInt("Qnt_Produto"));
+//
+//                resultado.add(produto);
+
+            }
+        } catch (Exception ex) {
+            System.out.println("Problemas as listar Produtos! Erro: " + ex.getMessage());
+            ex.printStackTrace();
+        } finally {
+            try {
+                ConnectionFactory.closeConnection(conn, stmt);
+            } catch (Exception ex) {
+                System.out.println("Problemas ao fechar os parâmetros de conexão! Erro: " + ex.getMessage());
+                ex.printStackTrace();
+            }
+
+        }
+
+        return resultado;
+    }
+    
     public Boolean alterar(Funcionario object) {
         Funcionario funcionario = (Funcionario) object;
         PreparedStatement stmt = null;
