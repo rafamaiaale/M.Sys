@@ -36,25 +36,21 @@ public class BuscarPorIdProduto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
+
         try {
-            System.out.println("primeiro lugar");
-            System.out.println("esteve aqui");
+            
+            Integer idProduto = Integer.parseInt(request.getParameter("idP"));;
             GenericDAO dao = new ProdutoDAO();
-            List<Produto> listaProduto = dao.buscarPorID(1);
-            System.out.println("passou");
-            request.setAttribute("produtos", listaProduto);
-            RequestDispatcher rd = request.getRequestDispatcher("/AlterarProduto.jsp");
+            List<Produto> listaProduto = dao.buscarPorID(idProduto);
+            request.setAttribute("produto", listaProduto);
+            RequestDispatcher rd = request.getRequestDispatcher("AlterarProduto.jsp");
             rd.forward(request, response);
 
         } catch (Exception ex) {
             System.out.println("Problemas ao listar Produto! Erro: " + ex.getMessage());
             ex.printStackTrace();
         }
-        
-        
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -83,7 +79,7 @@ public class BuscarPorIdProduto extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
     }
 
     /**

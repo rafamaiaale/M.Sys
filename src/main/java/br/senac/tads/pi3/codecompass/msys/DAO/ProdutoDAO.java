@@ -106,15 +106,16 @@ public class ProdutoDAO implements GenericDAO<Produto> {
         return resultado;
     }
 
-    public List<Produto> buscarPorID(int id) {
+    public List<Produto> buscarPorID(Integer id) {
         List<Produto> resultado = new ArrayList<Produto>();
         PreparedStatement stmt = null;
         ResultSet rs = null; //rs=coluna do banco
 
-        String sql = "Select * from Produto where ID_Produto = 2";
+        String sql = "Select * from Produto where ID_Produto = ?" ;
 
         try {
             stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, id);
             rs = stmt.executeQuery();
             
             while (rs.next()) {
@@ -153,7 +154,7 @@ public class ProdutoDAO implements GenericDAO<Produto> {
     public Boolean alterar(Produto object) {
         Produto produto = (Produto) object;
         PreparedStatement stmt = null;
-        String sql = "update produto set Nome_Produto=?, Tipo_Produto=?, Data_Produto=?, Cor_Produto=?, Valor__Produto=?, Marca__Produto=?, Modelo__Produto=? where ID_Produto=?;";
+        String sql = "update produto set Cod_Produto=?, Nome_Produto=?, Tipo_Produto=?, Cor_Produto=?, Valor__Produto=?, Fabricante_Produto=?, Modelo__Produto=? where ID_Produto=?;";
 
         try {
             stmt = conn.prepareStatement(sql);
@@ -166,6 +167,7 @@ public class ProdutoDAO implements GenericDAO<Produto> {
             stmt.setString(6, produto.getFabricante_Produto());
             stmt.setString(7, produto.getModelo_Produto());
             stmt.setInt(7, produto.getQnt_Produto());
+            stmt.setInt(8, produto.getID_Produto());
 
             stmt.executeUpdate();
             return true;

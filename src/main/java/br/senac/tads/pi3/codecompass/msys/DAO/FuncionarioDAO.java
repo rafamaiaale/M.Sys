@@ -109,7 +109,7 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
     }
 
     
-    public List<Funcionario> buscarPorID(int id) {
+    public List<Funcionario> buscarPorID(Integer id) {
         List<Funcionario> resultado = new ArrayList<Funcionario>();
         PreparedStatement stmt = null;
         ResultSet rs = null; //rs=coluna do banco

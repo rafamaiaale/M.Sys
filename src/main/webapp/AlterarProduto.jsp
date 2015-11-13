@@ -68,109 +68,32 @@
                         <div class="spacer">
                         </div>
 
-                        <table class="table table-striped table-hover table-users">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Cod</th>
-                                    <th>Nome do Produto</th>
-                                    <th>Fabricante</th>
-                                    <th>Tipo</th>
-                                    <th>Cor</th>
-                                    <th>Valor</th>
-                                    <th>Modelo</th>
-                                    <th>Quantidade</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>30</td>
-                                    <td>Violão aço cutaway </td>
-                                    <td>Tagima</td>
-                                    <td>Corda</td>
-                                    <td>Preto</td>
-                                    <td>R$ 450</td>
-                                    <td>T635</td>
-                                    <td>10</td>
-
-                                    <td><a class="btn btn-default" href="#">Editar</a></td>
-                                    <td><a class="btn btn-danger" href="#">Deletar</a></td>
-                                </tr>
-
-                                <tr>
-                                    <td>1</td>
-                                    <td>30</td>
-                                    <td>Violão aço cutaway </td>
-                                    <td>Tagima</td>
-                                    <td>Corda</td>
-                                    <td>Preto</td>
-                                    <td>R$ 450</td>
-                                    <td>T635</td>
-                                    <td>10</td>
-
-                                    <td><a class="btn btn-default" href="#">Editar</a></td>
-                                    <td><a class="btn btn-danger" href="#">Deletar</a></td>
-                                </tr>
-
-                                <tr>
-                                    <td>1</td>
-                                    <td>30</td>
-                                    <td>Violão aço cutaway </td>
-                                    <td>Tagima</td>
-                                    <td>Corda</td>
-                                    <td>Preto</td>
-                                    <td>R$ 450</td>
-                                    <td>T635</td>
-                                    <td>10</td>
-
-                                    <td><a class="btn btn-default" href="#">Editar</a></td>
-                                    <td><a class="btn btn-danger" href="#">Deletar</a></td>
-                                </tr>
-
-                            <c:forEach items="${produtos}" var="produto">
-                                <tr>
-                                    <td><c:out value="${produto.ID_Produto}" /></td>
-                                <td><c:out value="${produto.cod_Produto}" /></td>
-                                <td><c:out value="${produto.nome_Produto}" /></td>
-                                <td><c:out value="${produto.fabricante_Produto}" /></td>
-                                <td><c:out value="${produto.tipo_Produto}" /></td>
-                                <td><c:out value="${produto.cor_Produto}" /></td>
-                                <td><c:out value="${produto.valor_Produto}" /></td>
-                                <td><c:out value="${produto.modelo_Produto}" /></td>
-                                <td><c:out value="${produto.qnt_Produto}" /></td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-
+                       
 
                         <form action="AlterarProduto" method="post">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="nomeP"><b>Nome do Produto</b></label>
-                                    <input type="text" class="form-control" value="${produtos.nome_Produto}" id="nomeP" name="nameP" maxlength="255" required/>
+                                    <input type="text" class="form-control" value="${produto.nome_Produto}" id="nomeP" name="nameP" maxlength="255" required/>
                                 </div>
                                 <div class="row">  
                                     <div class="col-sm-6 form-group">
                                         <label for="codP"><b>Código do Produto</b></label>
-                                        <input type="number" class="form-control" id="codP" name="codP" required autofocus/>
+                                        <input type="number" class="form-control" id="codP" value="${produto.cod_Produto}" name="codP" required autofocus/>
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label for="fabP"><b>Fabricante</b></label>
-                                        <input type="text" class="form-control" id="fab" name="fabP" maxlength="45"/>
+                                        <input type="text" class="form-control" id="fab" value="${produto.fabricante_Produto}" name="fabP" maxlength="45"/>
                                     </div>	
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="model"><b>Modelo</b></label>
-                                        <input type="text" class="form-control" id="modelP" name="modelP" maxlength="100"/>
+                                        <input type="text" class="form-control" id="modelP" value="${produto.modelo_Produto}" name="modelP" maxlength="100"/>
                                     </div>	
                                     <div class="col-sm-6 form-group">
                                         <label for="quant"><b>Quantidade</b></label>
-                                        <input type="number" class="form-control" id="quanP" name="quanP" required/>
+                                        <input type="number" class="form-control" id="quanP" value="${produto.qnt_Produto}" name="quanP" required/>
                                     </div>	
                                 </div>
 
@@ -189,11 +112,11 @@
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="cor"><b>Cor</b></label>
-                                        <input type="text" class="form-control" id="corP" name="corP" maxlength="20"/>
+                                        <input type="text" class="form-control" value="${produto.cor_Produto}" id="corP" name="corP" maxlength="20"/>
                                     </div>		
                                     <div class="col-sm-6 form-group">
                                         <label for="val"><b>Valor</b></label>
-                                        <input type="number" class="form-control" id="valP" name="valP" min="0.01" step="0.01" required/>
+                                        <input type="number" class="form-control" value="${produto.valor_Produto}" id="valP" name="valP" min="0.01" step="0.01" required/>
                                     </div>	
                                 </div>
                                 <div class="form-group">
