@@ -68,7 +68,7 @@
             </fieldset><p></p>
             <span id="msg" hidden>Cadastro realizado com sucesso!</span>
             <button id="btS" type="submit">Salvar</button>
-            <button id="btV" type="submit" onClick="history.go(-1)">Voltar</button>
+            <button id="btV" type="submit" onclick="javascript:window.location='MenuProduto.jsp'">Voltar</button>
         </form>
     </body>
 </html>

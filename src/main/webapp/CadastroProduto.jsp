@@ -57,22 +57,22 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="nomeP"><b>Nome do Produto</b></label>
-                                        <input type="text" class="form-control" id="nomeP" name="nameP" maxlength="255" required/>
+                                        <input type="text" class="form-control" id="nomeP" name="nameP" maxlength="255" required autofocus/>
                                     </div>
                                     <div class="row">  
                                         <div class="col-sm-6 form-group">
                                             <label for="codP"><b>Código do Produto</b></label>
-                                            <input type="number" class="form-control" id="codP" name="codP" required autofocus/>
+                                            <input type="number" class="form-control" id="codP" name="codP" required/>
                                         </div>
                                         <div class="col-sm-6 form-group">
                                             <label for="fabP"><b>Fabricante</b></label>
-                                            <input type="text" class="form-control" id="fab" name="fabP" maxlength="45"/>
+                                            <input type="text" class="form-control" id="fab" name="fabP" maxlength="45" required/>
                                         </div>	
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
                                             <label for="model"><b>Modelo</b></label>
-                                            <input type="text" class="form-control" id="modelP" name="modelP" maxlength="100"/>
+                                            <input type="text" class="form-control" id="modelP" name="modelP" maxlength="100" required/>
                                         </div>	
                                         <div class="col-sm-6 form-group">
                                             <label for="quant"><b>Quantidade</b></label>
@@ -94,7 +94,7 @@
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
                                             <label for="cor"><b>Cor</b></label>
-                                            <input type="text" class="form-control" id="corP" name="corP" maxlength="20"/>
+                                            <input type="text" class="form-control" id="corP" name="corP" maxlength="20" required/>
                                         </div>		
                                         <div class="col-sm-6 form-group">
                                             <label for="val"><b>Valor</b></label>
@@ -105,7 +105,7 @@
 
                                     </div>
                                     <button id="btS" class="btn btn-block btn-info" type="submit">Salvar</button>
-                                    <button id="btV" class="btn btn-block btn-danger"  type="submit" onClick="history.go(-1)">Voltar</button>	
+                                    <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuProduto.jsp'">Voltar</button>	
                                 </div>
                             </form>
                         </div>

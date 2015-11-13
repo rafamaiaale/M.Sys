@@ -38,7 +38,7 @@ public class BuscarPorIdProduto extends HttpServlet {
             throws ServletException, IOException {
 
         try {
-            
+
             Integer idProduto = Integer.parseInt(request.getParameter("idP"));;
             GenericDAO dao = new ProdutoDAO();
             List<Produto> listaProduto = dao.buscarPorID(idProduto);

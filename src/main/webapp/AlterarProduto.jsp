@@ -57,18 +57,16 @@
                         <div class="col-md-12">
                             <form action="BuscarPorIdProduto" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" name="idP" placeholder="Buscar Produto" class="form-control search-query">
+                                    <input type="text" name="idP" placeholder="Buscar Produto" class="form-control search-query" autofocus>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" class="btn btn-info">Pesquisar</button>
+                                    <button  type="submit" class="btn btn-info">Pesquisar</button>
                                 </div>
                             </form>
                         </div>
 
                         <div class="spacer">
                         </div>
-
-                       
 
                         <form action="AlterarProduto" method="post">
                             <div class="col-sm-12">
@@ -79,24 +77,23 @@
                                 <div class="row">  
                                     <div class="col-sm-6 form-group">
                                         <label for="codP"><b>Código do Produto</b></label>
-                                        <input type="number" class="form-control" id="codP" value="${produto.cod_Produto}" name="codP" required autofocus/>
+                                        <input type="number" class="form-control" id="codP" value="${produto.cod_Produto}" name="codP" required/>
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label for="fabP"><b>Fabricante</b></label>
-                                        <input type="text" class="form-control" id="fab" value="${produto.fabricante_Produto}" name="fabP" maxlength="45"/>
+                                        <input type="text" class="form-control" id="fab" value="${produto.fabricante_Produto}" name="fabP" maxlength="45" required/>
                                     </div>	
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="model"><b>Modelo</b></label>
-                                        <input type="text" class="form-control" id="modelP" value="${produto.modelo_Produto}" name="modelP" maxlength="100"/>
+                                        <input type="text" class="form-control" id="modelP" value="${produto.modelo_Produto}" name="modelP" maxlength="100" required/>
                                     </div>	
                                     <div class="col-sm-6 form-group">
                                         <label for="quant"><b>Quantidade</b></label>
                                         <input type="number" class="form-control" id="quanP" value="${produto.qnt_Produto}" name="quanP" required/>
                                     </div>	
                                 </div>
-
                                 <!-- <div class="row">
                                     <div class="col-sm-12 form-group">
                                         <label for="tipP"><b>Tipo do Produto</b></label>
@@ -112,7 +109,7 @@
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="cor"><b>Cor</b></label>
-                                        <input type="text" class="form-control" value="${produto.cor_Produto}" id="corP" name="corP" maxlength="20"/>
+                                        <input type="text" class="form-control" value="${produto.cor_Produto}" id="corP" name="corP" maxlength="20" required/>
                                     </div>		
                                     <div class="col-sm-6 form-group">
                                         <label for="val"><b>Valor</b></label>

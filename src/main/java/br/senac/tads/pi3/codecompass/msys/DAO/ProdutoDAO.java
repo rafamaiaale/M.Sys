@@ -106,18 +106,19 @@ public class ProdutoDAO implements GenericDAO<Produto> {
         return resultado;
     }
 
+    @Override
     public List<Produto> buscarPorID(Integer id) {
         List<Produto> resultado = new ArrayList<Produto>();
         PreparedStatement stmt = null;
         ResultSet rs = null; //rs=coluna do banco
 
-        String sql = "Select * from Produto where ID_Produto = ?" ;
+        String sql = "Select * from Produto where ID_Produto = ?";
 
         try {
             stmt = conn.prepareStatement(sql);
             stmt.setInt(1, id);
             rs = stmt.executeQuery();
-            
+
             while (rs.next()) {
                 Produto produto = new Produto();
 
