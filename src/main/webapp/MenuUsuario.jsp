@@ -1,14 +1,13 @@
-<%--
-    Document   : Menu.jsp
-    Created on : 30/10/2015, 20:21:01
-    Author     : lucas.dndomingues
+<%-- 
+    Document   : MenuUsuario
+    Created on : 14/11/2015, 20:27:49
+    Author     : Lucas Dantas
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +16,7 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
 
 
-        <title>Gestão de Produtos</title>
+        <title>Gestão de Usuários</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="content/css/bootstrap.min.css" rel="stylesheet">
@@ -26,25 +25,23 @@
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
 
         <link href="style.css" rel="stylesheet">
-
     </head>
     <body>
-
         <!-- Sidebar -->
         <div id="wrapper">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="MenuProduto.jsp">Menu - Produto</a>
+                        <a href="MenuUsuario.jsp">Menu - Usuários</a>
                     </li>
                     <li>
-                        <a href="CadastroProduto.jsp">Cadastrar Produtos</a>
+                        <a href="CadastroUsuario.jsp">Cadastrar Usuário</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Listar Produtos</a>
+                        <a href="">Listar Usuários</a>
                     </li>
                     <li>
-                        <a href="AlterarProduto.jsp">Atualizar Produtos</a>
+                        <a href="AlterarUsuario.jsp">Atualizar Usuários</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do sistema</a>
@@ -63,7 +60,7 @@
                             <div class="jumbotron">
                                 <h1>Olá, Bem vindo!</h1>
                                 <hr>
-                                 <p><a class="btn btn-default" id="menu-toggle" role="button">M.sys | Web Solutions</a></p>
+                                <p><a class="btn btn-default" id="menu-toggle" role="button">M.sys | Web Solutions</a></p>
                             </div>
                         </div>
                     </div>
