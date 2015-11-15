@@ -52,6 +52,11 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
+                     <!-- Alert --> 
+                    <div class="alert alert-success" role="alert">Produto Atualizado com sucesso!</div>
+                    
+                    <div class="alert alert-danger" role="alert">Erro ao Atualizar Produto, tente novamente</div>
+                    
                     <div class="row">
                         <h1 class="well">Alterar Produtos</h1>
                         <div class="col-md-12">

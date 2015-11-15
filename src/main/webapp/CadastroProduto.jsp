@@ -49,6 +49,12 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
+                    <!-- Alert --> 
+                    <div class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
+                    
+                    <div class="alert alert-danger" role="alert">Erro ao cadastrar Produto, tente novamente</div>
+                    
+                    
                     <div class="container">
                         <h1 class="well">Cadastro de Produto</h1>
                         <div class="col-lg-12 well">

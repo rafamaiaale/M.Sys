@@ -33,13 +33,13 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="MenuProduto.jsp">Menu - Usuários</a>
+                        <a href="MenuUsuario.jsp">Menu - Usuários</a>
                     </li>
                     <li>
                         <a href="CadastroUsuario.jsp">Cadastrar Usuário</a>
                     </li>
                     <li>
-                        <a href="">Listar Usuários</a>
+                        <a href="ListaUsuario.jsp">Listar Usuários</a>
                     </li>
                     <li>
                         <a href="AlterarUsuario.jsp">Atualizar Usuários</a>
@@ -51,6 +51,11 @@
             </div>
             <div id="page-content-wrapper">
                 <div class="container-fluid">
+                    <!-- Alert --> 
+                    <div class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
+
+                    <div class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente</div>
+
                     <div class="container">
                         <h1 class="well">Cadastro de Usuários</h1>
                         <div class="col-lg-12 well">
@@ -111,9 +116,9 @@
                 </div>
             </div>
         </div>
+        <script src="content/js/jquery.js"></script>
+        <script src="content/js/bootstrap.min.js"></script>
     </body>
-    <script src="content/js/jquery.js"></script>
-    <script src="content/js/bootstrap.min.js"></script>
 </html>
 <!-- /#sidebar-wrapper -->
 <!-- Page Content -->

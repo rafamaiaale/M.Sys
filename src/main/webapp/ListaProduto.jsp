@@ -35,7 +35,7 @@
                         <a href="ListarProduto">Pesquisar Produto</a>
                     </li>
                     <li>
-                        <a href="#">Atualizar Produto</a>
+                        <a href="AlterarProduto.jsp">Atualizar Produto</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do sistema</a>
