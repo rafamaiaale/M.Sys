@@ -59,8 +59,13 @@
 
                             <div class="jumbotron">
                                 <h1>Olá, Bem vindo!</h1>
+                                <div class="panel panel-default">
+                                    <div class="panel-body" id="menu-toggle">
+                                        <h3><span class="label label-default">Gestão de Usuários</span></h3>
+                                    </div>
+                                </div>
                                 <hr>
-                                <p><a class="btn btn-default" id="menu-toggle" role="button">M.sys | Web Solutions</a></p>
+                                <h6>M.Sys ©2015 - Todos os Direitos Reservados</h6>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
-<%--
-    Document   : Menu.jsp
-    Created on : 30/10/2015, 20:21:01
+<%-- 
+    Document   : MenuAdmin
+    Created on : 16/11/2015, 20:07:07
     Author     : lucas.dndomingues
 --%>
 
@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +16,7 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
 
 
-        <title>Gestão de Produtos</title>
+        <title>Acesso - Painel Administrativo</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="content/css/bootstrap.min.css" rel="stylesheet">
@@ -26,33 +25,28 @@
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
 
         <link href="style.css" rel="stylesheet">
-
     </head>
     <body>
-
         <!-- Sidebar -->
         <div id="wrapper">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
+
+                    <!-- Produtos -->
                     <li class="sidebar-brand">
-                        <a href="MenuProduto.jsp">Menu - Produto</a>
+                        <a href="MenuAdmin.jsp">Painel Administrativo</a>
                     </li>
                     <li>
-                        <a href="CadastroProduto.jsp">Cadastrar Produtos</a>
+                        <a href="#">Relatório de Produtos</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Listar Produtos</a>
+                        <a href="#">Relatório de Vendas</a>
                     </li>
                     <li>
-                        <a href="AlterarProduto.jsp">Atualizar Produtos</a>
-                    </li>
-                    <li>
-                        <a href="index.jsp">Deslogar do sistema</a>
+                        <a href="index.jsp">Deslogar do Sistema</a>
                     </li>
                 </ul>
             </div>
-            <!-- /#sidebar-wrapper -->
-
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
@@ -64,7 +58,7 @@
                                 <h1>Olá, Bem vindo!</h1>
                                 <div class="panel panel-default">
                                     <div class="panel-body" id="menu-toggle">
-                                        <h3><span class="label label-default">Gestão de Produtos</span></h3>
+                                        <h3><span class="label label-default">Painel Administrativo</span></h3>
                                     </div>
                                 </div>
                                 <hr>
@@ -75,7 +69,6 @@
                 </div>
             </div>
         </div>
-
         <!-- jQuery -->
         <script src="content/js/jquery.js"></script>
 
