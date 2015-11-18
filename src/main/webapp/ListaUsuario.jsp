@@ -35,13 +35,13 @@
                         <a href="MenuUsuario.jsp">Menu - Usuário</a>
                     </li>
                     <li>
-                        <a href="CadastroUsuario.jsp">Cadastrar Produtos</a>
+                        <a href="CadastroUsuario.jsp">Cadastrar Usuário</a>
                     </li>
                     <li>
                         <a href="ListaUsuario.jsp">Listar Usuários</a>
                     </li>
                     <li>
-                        <a href="AlterarUsuario.jsp">Atualizar Produtos</a>
+                        <a href="AlterarUsuario.jsp">Atualizar Usuários</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do sistema</a>

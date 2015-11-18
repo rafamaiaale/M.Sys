@@ -76,37 +76,37 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="nomeP"><b>Nome do Produto</b></label>
-                                    <input type="text" class="form-control" value="${produto.nome_Produto}" id="nomeP" name="nameP" maxlength="255" required/>
+                                    <input type="text" class="form-control" value="${produto.nomeProduto}" id="nomeP" name="nameP" maxlength="255" required/>
                                 </div>
                                 <div class="row">  
                                     <div class="col-sm-6 form-group">
                                         <label for="codP"><b>Código do Produto</b></label>
-                                        <input type="number" class="form-control" id="codP" value="${produto.cod_Produto}" name="codP" required/>
+                                        <input type="number" class="form-control" id="codP" value="${produto.codProduto}" name="codP" required/>
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label for="fabP"><b>Fabricante</b></label>
-                                        <input type="text" class="form-control" id="fab" value="${produto.fabricante_Produto}" name="fabP" maxlength="45" required/>
+                                        <input type="text" class="form-control" id="fab" value="${produto.fabricanteProduto}" name="fabP" maxlength="45" required/>
                                     </div>	
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="model"><b>Modelo</b></label>
-                                        <input type="text" class="form-control" id="modelP" value="${produto.modelo_Produto}" name="modelP" maxlength="100" required/>
+                                        <input type="text" class="form-control" id="modelP" value="${produto.modeloProduto}" name="modelP" maxlength="100" required/>
                                     </div>	
                                     <div class="col-sm-6 form-group">
                                         <label for="quant"><b>Quantidade</b></label>
-                                        <input type="number" class="form-control" id="quanP" value="${produto.qnt_Produto}" name="quanP" onblur="checkQuant(this.value)" required/>
+                                        <input type="number" class="form-control" id="quanP" value="${produto.qntProduto}" name="quanP" onblur="checkQuant(this.value)" required/>
                                     </div>	
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="cor"><b>Cor</b></label>
-                                        <input type="text" class="form-control" value="${produto.cor_Produto}" id="corP" name="corP" maxlength="20" required/>
+                                        <input type="text" class="form-control" value="${produto.corProduto}" id="corP" name="corP" maxlength="20" required/>
                                     </div>		
                                     <div class="col-sm-6 form-group">
                                         <label for="val"><b>Valor</b></label>
-                                        <input type="text" class="form-control" id="valP" value="${produto.valor_Produto}" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>  
-                                        <!--<input type="number" class="form-control" value="${produto.valor_Produto}" id="valP" name="valP" min="0.01" step="0.01" required/>-->
+                                        <input type="text" class="form-control" id="valP" value="${produto.valorProduto}" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>  
+                                        
                                     </div>	
                                 </div>
                                 <div class="form-group">
