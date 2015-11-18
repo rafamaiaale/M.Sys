@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,10 +32,10 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="MenuProduto.jsp">Menu - Produto</a>
+                        <a href="MenuUsuario.jsp">Menu - Usuário</a>
                     </li>
                     <li>
-                        <a href="CadastroProduto.jsp">Cadastrar Produtos</a>
+                        <a href="CadastroUsuario.jsp">Cadastrar Produtos</a>
                     </li>
                     <li>
                         <a href="ListaUsuario.jsp">Listar Usuários</a>
@@ -63,11 +66,11 @@
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>Login</th>
-                                <th>Senha</th>
                                 <th>E-mail</th>
                                 <th>Filial - UF</th>
                                 <th>Tipo do Usuário</th>
                                 <th>Ativo</th>
+                                <th>Departamento</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -77,29 +80,28 @@
                                 <td>1</td>
                                 <td>CodeCompass</td>
                                 <td>Admin</td>
-                                <td>admin</td>
                                 <td>codecompass@admin.com</td>
                                 <td>SP</td>
                                 <td>admin</td>
                                 <td>1</td>
+                                <td>Comercial</td>
 
                                 <td><a class="btn btn-default" href="#">Editar</a></td>
                                 <td><a class="btn btn-danger" href="#">Deletar</a></td>
                             </tr>
 
-                        <!--<c:forEach items="${produtos}" var="produto">
+                        <c:forEach items="${funcionarios}" var="funcionarios">
                             <tr>
-                                <td><c:out value="${produto.ID_Produto}" /></td>
-                            <td><c:out value="${produto.cod_Produto}" /></td>
-                            <td><c:out value="${produto.nome_Produto}" /></td>
-                            <td><c:out value="${produto.fabricante_Produto}" /></td>
-                            <td><c:out value="${produto.tipo_Produto}" /></td>
-                            <td><c:out value="${produto.cor_Produto}" /></td>
-                            <td><c:out value="${produto.valor_Produto}" /></td>
-                            <td><c:out value="${produto.modelo_Produto}" /></td>
-                            <td><c:out value="${produto.qnt_Produto}" /></td>
+                            <td><c:out value="${funcionarios.idFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.nomeFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.loginFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.cargoFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.emailFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.filialFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.situacaoFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.perfilFuncionario}" /></td>
                             </tr>
-                        </c:forEach>-->
+                        </c:forEach>
                         </tbody>
                     </table>
                 </div>

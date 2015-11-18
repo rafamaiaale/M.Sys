@@ -38,7 +38,7 @@
                         <a href="CadastroUsuario.jsp">Cadastrar Usuário</a>
                     </li>
                     <li>
-                        <a href="ListaUsuario.jsp">Listar Usuários</a>
+                        <a href="ListarUsuario">Listar Usuários</a>
                     </li>
                     <li>
                         <a href="AlterarUsuario.jsp">Atualizar Usuários</a>

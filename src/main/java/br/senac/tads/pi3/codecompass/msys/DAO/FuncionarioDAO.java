@@ -33,21 +33,19 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
     public Boolean cadastrar(Funcionario object) {
         Funcionario usuario = (Funcionario) object;
         PreparedStatement stmt = null;
-        String sql = "INSERT INTO Funcionario (Nome_Funcionario, Login_Funcionario, Senha_Funcionario, "
-                + "Cargo_Funcionario, Email_Funcionario, Filial_Funcionario, Situacao_Funcionario, Perfil_Funcionario)\n"
-                + "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Funcionario (NOME_FUNCIONARIO, LOGIN_FUNCIONARIO, SENHA_FUNCIONARIO, CARGO_FUNCIONARIO, EMAIL_FUNCIONARIO, FILIAL_FUNCIONARIO, SITUACAO_FUNCIONARIO, PERFIL_FUNCIONARIO)\n"
+                + "values (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, usuario.getID_Funcionario());
-            stmt.setString(1, usuario.getNome_Funcionario());
-            stmt.setString(2, usuario.getLogin_Funcionario());
-            stmt.setString(3, usuario.getSenha_Funcionario());
-            stmt.setString(4, usuario.getCargo_Funcionario());
-            stmt.setString(5, usuario.getEmail_Funcionario());
-            stmt.setString(6, usuario.getFilial_Funcionario());
-            stmt.setInt(7, usuario.getSituacao_Funcionario());
-            stmt.setString(8, usuario.getPerfil_Funcionario());
+            stmt.setString(1, usuario.getNomeFuncionario());
+            stmt.setString(2, usuario.getLoginFuncionario());
+            stmt.setString(3, usuario.getSenhaFuncionario());
+            stmt.setString(4, usuario.getCargoFuncionario());
+            stmt.setString(5, usuario.getEmailFuncionario());
+            stmt.setString(6, usuario.getFilialFuncionario());
+            stmt.setString(7, usuario.getSituacaoFuncionario());
+            stmt.setString(8, usuario.getPerfilFuncionario());
             stmt.execute();
             return true;
         } catch (SQLException ex) {
@@ -70,7 +68,7 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
         PreparedStatement stmt = null;
         ResultSet rs = null; //rs=coluna do banco
 
-        String sql = "Select * from Produto";
+        String sql = "Select * from Funcionario";
 
         try {
             stmt = conn.prepareStatement(sql);
@@ -79,15 +77,15 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
             while (rs.next()) {
                 Funcionario funcionario = new Funcionario();
 
-                funcionario.setID_Funcionario(rs.getInt("ID_Funcionario"));
-                funcionario.setNome_Funcionario(rs.getString("Nome_Funcionario"));
-                funcionario.setLogin_Funcionario(rs.getString("Login_Funcionario"));
-                funcionario.setSenha_Funcionario(rs.getString("Senha_Funcionario"));
-                funcionario.setCargo_Funcionario(rs.getString("Cargo_Funcionario"));
-                funcionario.setEmail_Funcionario(rs.getString("Email_Funcionario"));
-                funcionario.setFilial_Funcionario(rs.getString("Marca_Produto"));
-                funcionario.setSituacao_Funcionario(rs.getInt("Situacao_Funcionario"));
-                funcionario.setPerfil_Funcionario(rs.getString("Perfil_Funcionario"));
+                funcionario.setIdFuncionario(rs.getInt("ID_FUNCIONARIO"));
+                funcionario.setNomeFuncionario(rs.getString("NOME_FUNCIONARIO"));
+                funcionario.setLoginFuncionario(rs.getString("LOGIN_FUNCIONARIO"));
+                funcionario.setSenhaFuncionario(rs.getString("Senha_Funcionario"));
+                funcionario.setCargoFuncionario(rs.getString("Cargo_Funcionario"));
+                funcionario.setEmailFuncionario(rs.getString("Email_Funcionario"));
+                funcionario.setFilialFuncionario(rs.getString("Filial_Funcionario"));
+                funcionario.setSituacaoFuncionario(rs.getString("Situacao_Funcionario"));
+                funcionario.setPerfilFuncionario(rs.getString("Perfil_Funcionario"));
 
                 resultado.add(funcionario);
 
@@ -114,26 +112,26 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
         PreparedStatement stmt = null;
         ResultSet rs = null; //rs=coluna do banco
 
-        String sql = "Select * from Produto where ID_Produto = " + id;
+        String sql = "Select * from Funcionario where ID_Funcionario = " + id;
 
         try {
             stmt = conn.prepareStatement(sql);
             rs = stmt.executeQuery();
 
             while (rs.next()) {
-//                Funcionario produto = new Funcionario();
-//
-//                produto.setID_Produto(rs.getInt("ID_Produto"));
-//                produto.setCod_Produto(rs.getInt("Cod_Produto"));
-//                produto.setNome_Produto(rs.getString("Nome_Produto"));
-//                produto.setFabricante_Produto(rs.getString("Fabricante_Produto"));
-//                produto.setTipo_Produto(rs.getString("Tipo_Produto"));
-//                produto.setCor_Produto(rs.getString("Cor_Produto"));
-//                produto.setValor_Produto(rs.getDouble("Valor_Produto"));
-//                produto.setModelo_Produto(rs.getString("Modelo_Produto"));
-//                produto.setQnt_Produto(rs.getInt("Qnt_Produto"));
-//
-//                resultado.add(produto);
+                Funcionario funcionario = new Funcionario();
+
+                funcionario.setIdFuncionario(rs.getInt("ID_Funcionario"));
+                funcionario.setNomeFuncionario(rs.getString("Nome_Funcionario"));
+                funcionario.setLoginFuncionario(rs.getString("Login_Funcionario"));
+                funcionario.setSenhaFuncionario(rs.getString("Senha_Funcionario"));
+                funcionario.setCargoFuncionario(rs.getString("Cargo_Funcionario"));
+                funcionario.setEmailFuncionario(rs.getString("Email_Funcionario"));
+                funcionario.setFilialFuncionario(rs.getString("Marca_Produto"));
+                funcionario.setSituacaoFuncionario(rs.getString("Situacao_Funcionario"));
+                funcionario.setPerfilFuncionario(rs.getString("Perfil_Funcionario"));
+
+                resultado.add(funcionario);
 
             }
         } catch (Exception ex) {
@@ -161,15 +159,15 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
 
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, funcionario.getID_Funcionario());
-            stmt.setString(1, funcionario.getNome_Funcionario());
-            stmt.setString(2, funcionario.getLogin_Funcionario());
-            stmt.setString(3, funcionario.getSenha_Funcionario());
-            stmt.setString(4, funcionario.getCargo_Funcionario());
-            stmt.setString(5, funcionario.getEmail_Funcionario());
-            stmt.setString(6, funcionario.getFilial_Funcionario());
-            stmt.setInt(7, funcionario.getSituacao_Funcionario());
-            stmt.setString(8, funcionario.getPerfil_Funcionario());
+            stmt.setInt(1, funcionario.getIdFuncionario());
+            stmt.setString(1, funcionario.getNomeFuncionario());
+            stmt.setString(2, funcionario.getLoginFuncionario());
+            stmt.setString(3, funcionario.getSenhaFuncionario());
+            stmt.setString(4, funcionario.getCargoFuncionario());
+            stmt.setString(5, funcionario.getEmailFuncionario());
+            stmt.setString(6, funcionario.getFilialFuncionario());
+            stmt.setString(7, funcionario.getSituacaoFuncionario());
+            stmt.setString(8, funcionario.getPerfilFuncionario());
             stmt.executeUpdate();
             return true;
 

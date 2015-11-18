@@ -14,99 +14,86 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(String Nome_Funcionario, String Login_Funcionario, String Senha_Funcionario, String Cargo_Funcionario, String Email_Funcionario, String Filial_Funcionario, int Situacao_Funcionario, String Perfil_Funcionario) {
-        this.Nome_Funcionario = Nome_Funcionario;
-        this.Login_Funcionario = Login_Funcionario;
-        this.Senha_Funcionario = Senha_Funcionario;
-        this.Cargo_Funcionario = Cargo_Funcionario;
-        this.Email_Funcionario = Email_Funcionario;
-        this.Filial_Funcionario = Filial_Funcionario;
-        this.Situacao_Funcionario = Situacao_Funcionario;
-        this.Perfil_Funcionario = Perfil_Funcionario;
+    private int idFuncionario;
+    private String nomeFuncionario;
+    private String loginFuncionario;
+    private String senhaFuncionario;
+    private String cargoFuncionario;
+    private String emailFuncionario;
+    private String filialFuncionario;
+    private String situacaoFuncionario;
+    private String perfilFuncionario;
+
+    public int getIdFuncionario() {
+        return idFuncionario;
     }
 
-    private int ID_Funcionario;
-    private String Nome_Funcionario;
-    private String Login_Funcionario;
-    private String Senha_Funcionario;
-    private String Cargo_Funcionario;
-    private String Email_Funcionario;
-    private String Filial_Funcionario;
-    private int Situacao_Funcionario;
-    private String Perfil_Funcionario;
-
-    
-
-    public int getID_Funcionario() {
-        return ID_Funcionario;
+    public void setIdFuncionario(int idFuncionario) {
+        this.idFuncionario = idFuncionario;
     }
 
-    public String getNome_Funcionario() {
-        return Nome_Funcionario;
+    public String getNomeFuncionario() {
+        return nomeFuncionario;
     }
 
-    public String getLogin_Funcionario() {
-        return Login_Funcionario;
+    public void setNomeFuncionario(String nomeFuncionario) {
+        this.nomeFuncionario = nomeFuncionario;
     }
 
-    public String getSenha_Funcionario() {
-        return Senha_Funcionario;
+    public String getLoginFuncionario() {
+        return loginFuncionario;
     }
 
-    public String getCargo_Funcionario() {
-        return Cargo_Funcionario;
+    public void setLoginFuncionario(String loginFuncionario) {
+        this.loginFuncionario = loginFuncionario;
     }
 
-    public String getEmail_Funcionario() {
-        return Email_Funcionario;
+    public String getSenhaFuncionario() {
+        return senhaFuncionario;
     }
 
-    public String getFilial_Funcionario() {
-        return Filial_Funcionario;
+    public void setSenhaFuncionario(String senhaFuncionario) {
+        this.senhaFuncionario = senhaFuncionario;
     }
 
-    public int getSituacao_Funcionario() {
-        return Situacao_Funcionario;
+    public String getCargoFuncionario() {
+        return cargoFuncionario;
     }
 
-    public String getPerfil_Funcionario() {
-        return Perfil_Funcionario;
+    public void setCargoFuncionario(String cargoFuncionario) {
+        this.cargoFuncionario = cargoFuncionario;
     }
 
-    public void setID_Funcionario(int ID_Funcionario) {
-        this.ID_Funcionario = ID_Funcionario;
+    public String getEmailFuncionario() {
+        return emailFuncionario;
     }
 
-    public void setNome_Funcionario(String Nome_Funcionario) {
-        this.Nome_Funcionario = Nome_Funcionario;
+    public void setEmailFuncionario(String emailFuncionario) {
+        this.emailFuncionario = emailFuncionario;
     }
 
-    public void setLogin_Funcionario(String Login_Funcionario) {
-        this.Login_Funcionario = Login_Funcionario;
+    public String getFilialFuncionario() {
+        return filialFuncionario;
     }
 
-    public void setSenha_Funcionario(String Senha_Funcionario) {
-        this.Senha_Funcionario = Senha_Funcionario;
+    public void setFilialFuncionario(String filialFuncionario) {
+        this.filialFuncionario = filialFuncionario;
     }
 
-    public void setCargo_Funcionario(String Cargo_Funcionario) {
-        this.Cargo_Funcionario = Cargo_Funcionario;
+    public String getSituacaoFuncionario() {
+        return situacaoFuncionario;
     }
 
-    public void setEmail_Funcionario(String Email_Funcionario) {
-        this.Email_Funcionario = Email_Funcionario;
+    public void setSituacaoFuncionario(String situacaoFuncionario) {
+        this.situacaoFuncionario = situacaoFuncionario;
     }
 
-    public void setFilial_Funcionario(String Filial_Funcionario) {
-        this.Filial_Funcionario = Filial_Funcionario;
+    public String getPerfilFuncionario() {
+        return perfilFuncionario;
     }
 
-    public void setSituacao_Funcionario(int Situacao_Funcionario) {
-        this.Situacao_Funcionario = Situacao_Funcionario;
-    }
-
-    public void setPerfil_Funcionario(String Perfil_Funcionario) {
-        this.Perfil_Funcionario = Perfil_Funcionario;
+    public void setPerfilFuncionario(String perfilFuncionario) {
+        this.perfilFuncionario = perfilFuncionario;
     }
 
 }

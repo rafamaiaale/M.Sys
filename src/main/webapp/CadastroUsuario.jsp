@@ -39,7 +39,7 @@
                         <a href="CadastroUsuario.jsp">Cadastrar Usuário</a>
                     </li>
                     <li>
-                        <a href="ListaUsuario.jsp">Listar Usuários</a>
+                        <a href="ListarUsuario">Listar Usuários</a>
                     </li>
                     <li>
                         <a href="AlterarUsuario.jsp">Atualizar Usuários</a>
@@ -60,7 +60,7 @@
                         <h1 class="well">Cadastro de Usuários</h1>
                         <div class="col-lg-12 well">
 
-                            <form action="" method="post">
+                            <form action="CadastrarUsuario" method="post">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="nome"><b>Nome do Usuário</b></label>
@@ -76,14 +76,19 @@
                                             <input type="password" class="form-control" id="pass" name="password" maxlength="45" minlength="5" required/>
                                         </div>	
                                     </div>
+                                    
                                     <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label for="login"><b>Cargo</b></label>
+                                            <input type="text" class="form-control" id="cargo" name="cargo" maxlength="45" required/>
+                                        </div>
                                         <div class="col-sm-6 form-group">
                                             <label for="email"><b>E-mail</b></label>
                                             <input type="email" class="form-control" id="email" name="email" maxlength="100" required/>
                                         </div>	
                                         <div class="col-sm-6 form-group">
                                             <label for="filial"><b>Filial - UF</b></label>
-                                            <input type="text" class="form-control" id="filial" maxlength="2" pattern="[A-Z\s]+$" required/>
+                                            <input type="text" class="form-control" id="filial" name="filial" maxlength="2" pattern="[A-Z\s]+$" required/>
                                         </div>	
                                     </div>
                                     <div class="row">
@@ -91,17 +96,11 @@
                                             <label for="tipP"><b>Tipo do Usuário</b></label>
                                             <select name="perfil" class="form-control">
                                                 <option value="default" selected="selected" disabled>Selecione</option>
-                                                <option value="Suporte">Suporte</option>
-                                                <option value="PROD" >Comprador</option>
+                                                <option value="T.I">Suporte</option>
+                                                <option value="PRD" >Produção</option>
                                                 <option value="COM">Vendedor</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <label><b>Ativo</b></label>
-                                            <input type="checkbox" id="status" value="Ativo" checked="checked" title="Ativo"/>
-                                        </div>		
                                     </div>
                                     <div class="form-group">
 
