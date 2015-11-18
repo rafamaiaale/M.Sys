@@ -43,7 +43,7 @@ public class ListarUsuario extends HttpServlet {
             request.setAttribute("funcionarios", listaFuncionario);
             RequestDispatcher rd = request.getRequestDispatcher("/ListaUsuario.jsp");
             rd.forward(request, response);
-
+ 
         } catch (Exception ex) {
             System.out.println("Problemas ao listar Produto! Erro: " + ex.getMessage());
             ex.printStackTrace();

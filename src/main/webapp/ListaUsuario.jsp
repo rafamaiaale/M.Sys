@@ -85,7 +85,7 @@
                                 <td>admin</td>
                                 <td>1</td>
                                 <td>Comercial</td>
-
+ 
                                 <td><a class="btn btn-default" href="#">Editar</a></td>
                                 <td><a class="btn btn-danger" href="#">Deletar</a></td>
                             </tr>
