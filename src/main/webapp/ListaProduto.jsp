@@ -32,7 +32,7 @@
                         <a href="CadastroProduto.jsp">Cadastrar Produto</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Pesquisar Produto</a>
+                        <a href="ListarProduto">Listar Produto</a>
                     </li>
                     <li>
                         <a href="AlterarProduto.jsp">Atualizar Produto</a>
@@ -85,15 +85,15 @@
 
                             <c:forEach items="${produtos}" var="produto">
                                 <tr>
-                                    <td><c:out value="${produto.ID_Produto}" /></td>
-                                    <td><c:out value="${produto.cod_Produto}" /></td>
-                                    <td><c:out value="${produto.nome_Produto}" /></td>
-                                    <td><c:out value="${produto.fabricante_Produto}" /></td>
-                                    <td><c:out value="${produto.tipo_Produto}" /></td>
-                                    <td><c:out value="${produto.cor_Produto}" /></td>
-                                    <td><c:out value="${produto.valor_Produto}" /></td>
-                                    <td><c:out value="${produto.modelo_Produto}" /></td>
-                                    <td><c:out value="${produto.qnt_Produto}" /></td>
+                                    <td><c:out value="${produto.idProduto}" /></td>
+                                    <td><c:out value="${produto.codProduto}" /></td>
+                                    <td><c:out value="${produto.nomeProduto}" /></td>
+                                    <td><c:out value="${produto.fabricanteProduto}" /></td>
+                                    <td><c:out value="${produto.tipoProduto}" /></td>
+                                    <td><c:out value="${produto.corProduto}" /></td>
+                                    <td><c:out value="${produto.valorProduto}" /></td>
+                                    <td><c:out value="${produto.modeloProduto}" /></td>
+                                    <td><c:out value="${produto.qntProduto}" /></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

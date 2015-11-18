@@ -13,89 +13,91 @@ import java.sql.Date;
  */
 public class Produto {
 
-    private int ID_Produto;
-    private int Cod_Produto;
-    private String Nome_Produto;
-    private String Fabricante_Produto;
-    private String Tipo_Produto;
-    private String Cor_Produto;
-    private double Valor_Produto;
-    private String Modelo_Produto;
-    private int qnt_Produto;
+    private int idProduto;
+    private int codProduto;
+    private String nomeProduto;
+    private String fabricanteProduto;
+    private String tipoProduto;
+    private String corProduto;
+    private double valorProduto;
+    private String modeloProduto;
+    private int qntProduto;
 
     public Produto() {
     }
 
-    public int getID_Produto() {
-        return ID_Produto;
+    public int getIdProduto() {
+        return idProduto;
     }
 
-    public void setID_Produto(int ID_Produto) {
-        this.ID_Produto = ID_Produto;
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
     }
 
-    public int getCod_Produto() {
-        return Cod_Produto;
+    public int getCodProduto() {
+        return codProduto;
     }
 
-    public void setCod_Produto(int Cod_Produto) {
-        this.Cod_Produto = Cod_Produto;
+    public void setCodProduto(int codProduto) {
+        this.codProduto = codProduto;
     }
 
-    public String getNome_Produto() {
-        return Nome_Produto;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setNome_Produto(String Nome_Produto) {
-        this.Nome_Produto = Nome_Produto;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
-    public String getTipo_Produto() {
-        return Tipo_Produto;
+    public String getFabricanteProduto() {
+        return fabricanteProduto;
     }
 
-    public void setTipo_Produto(String Tipo_Produto) {
-        this.Tipo_Produto = Tipo_Produto;
+    public void setFabricanteProduto(String fabricanteProduto) {
+        this.fabricanteProduto = fabricanteProduto;
     }
 
-    public String getCor_Produto() {
-        return Cor_Produto;
+    public String getTipoProduto() {
+        return tipoProduto;
     }
 
-    public void setCor_Produto(String Cor_Produto) {
-        this.Cor_Produto = Cor_Produto;
+    public void setTipoProduto(String tipoProduto) {
+        this.tipoProduto = tipoProduto;
     }
 
-    public double getValor_Produto() {
-        return Valor_Produto;
+    public String getCorProduto() {
+        return corProduto;
     }
 
-    public void setValor_Produto(double Valor_Produto) {
-        this.Valor_Produto = Valor_Produto;
+    public void setCorProduto(String corProduto) {
+        this.corProduto = corProduto;
     }
 
-    public String getModelo_Produto() {
-        return Modelo_Produto;
+    public double getValorProduto() {
+        return valorProduto;
     }
 
-    public void setModelo_Produto(String Modelo_Produto) {
-        this.Modelo_Produto = Modelo_Produto;
+    public void setValorProduto(double valorProduto) {
+        this.valorProduto = valorProduto;
     }
 
-    public int getQnt_Produto() {
-        return qnt_Produto;
+    public String getModeloProduto() {
+        return modeloProduto;
     }
 
-    public void setQnt_Produto(int qnt_Produto) {
-        this.qnt_Produto = qnt_Produto;
+    public void setModeloProduto(String modeloProduto) {
+        this.modeloProduto = modeloProduto;
     }
 
-    public String getFabricante_Produto() {
-        return Fabricante_Produto;
+    public int getQntProduto() {
+        return qntProduto;
     }
 
-    public void setFabricante_Produto(String Fabricante_Produto) {
-        this.Fabricante_Produto = Fabricante_Produto;
+    public void setQntProduto(int qntProduto) {
+        this.qntProduto = qntProduto;
     }
+
+    
 
 }

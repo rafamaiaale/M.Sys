@@ -48,14 +48,14 @@ public class CadastrarProduto extends HttpServlet {
         
         Produto produto = new Produto();
         
-        produto.setCod_Produto(codProduto);
-        produto.setNome_Produto(nomeProduto);
-        produto.setFabricante_Produto(nomeFabricante);
-        produto.setModelo_Produto(modeloProduto);
-        produto.setTipo_Produto(tipoProduto);
-        produto.setCor_Produto(corProduto);
-        produto.setValor_Produto(valorProduto);
-        produto.setQnt_Produto(qntProduto);
+        produto.setCodProduto(codProduto);
+        produto.setNomeProduto(nomeProduto);
+        produto.setFabricanteProduto(nomeFabricante);
+        produto.setModeloProduto(modeloProduto);
+        produto.setTipoProduto(tipoProduto);
+        produto.setCorProduto(corProduto);
+        produto.setValorProduto(valorProduto);
+        produto.setQntProduto(qntProduto);
         
         try{
             GenericDAO dao = new ProdutoDAO();
