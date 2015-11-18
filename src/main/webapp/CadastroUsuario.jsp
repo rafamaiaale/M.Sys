@@ -14,17 +14,14 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-
         <!-- Bootstrap Core CSS -->
         <link href="content/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
-
         <link href="style.css" rel="stylesheet"> 
-
+        <script type="text/javascript" src="MascaraValidacao.js"></script>
+        
         <title>Gestão de Usuários</title>
-
-
 
     </head>
     <body>
@@ -108,7 +105,7 @@
                                     </div>
                                     <span id="msg" hidden>Cadastro realizado com sucesso!</span>
                                     <button id="btS" class="btn btn-block btn-info" type="submit">Salvar</button>
-                                    <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuProduto.jsp'">Voltar</button>	
+                                    <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuUsuario.jsp'">Voltar</button>	
                                 </div>
                             </form>
                         </div>

@@ -122,7 +122,7 @@
 
                                 </div>
                                 <button id="btS" class="btn btn-block btn-info" type="submit">Atualizar</button>
-                                <!--<button id="btV" class="btn btn-block btn-danger"  type="submit" onClick="history.go(-1)">Voltar</button>	-->
+                                <!--<button id="btV" class="btn btn-block btn-danger"  type="submit" onclick="javascript:window.location = 'MenuUsuario.jsp'">Voltar</button>	-->
                             </div>
                         </form>
                     </div>

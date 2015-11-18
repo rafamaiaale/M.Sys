@@ -19,12 +19,11 @@
 
         <!-- Bootstrap Core CSS -->
         <link href="content/css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Custom CSS -->
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
-
         <link href="style.css" rel="stylesheet">
 
+        <script type="text/javascript" src="MascaraValidacao.js"></script>
     </head>
     <body>
         <!-- Sidebar -->
@@ -96,21 +95,9 @@
                                     </div>	
                                     <div class="col-sm-6 form-group">
                                         <label for="quant"><b>Quantidade</b></label>
-                                        <input type="number" class="form-control" id="quanP" value="${produto.qnt_Produto}" name="quanP" required/>
+                                        <input type="number" class="form-control" id="quanP" value="${produto.qnt_Produto}" name="quanP" onblur="checkQuant(this.value)" required/>
                                     </div>	
                                 </div>
-                                <!-- <div class="row">
-                                    <div class="col-sm-12 form-group">
-                                        <label for="tipP"><b>Tipo do Produto</b></label>
-                                        <select name="tipoP" class="form-control">
-                                            <option value="default" selected="selected" disabled>Selecione</option>
-                                            <option value="audio">Audio</option>
-                                            <option value="cordas">Cordas</option>
-                                            <option value="percurssao">Percurssão</option>
-                                            <option value="tecla">Teclas</option>
-                                        </select>
-                                    </div>
-                                </div> -->
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="cor"><b>Cor</b></label>
@@ -118,7 +105,8 @@
                                     </div>		
                                     <div class="col-sm-6 form-group">
                                         <label for="val"><b>Valor</b></label>
-                                        <input type="number" class="form-control" value="${produto.valor_Produto}" id="valP" name="valP" min="0.01" step="0.01" required/>
+                                        <input type="text" class="form-control" id="valP" value="${produto.valor_Produto}" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>  
+                                        <!--<input type="number" class="form-control" value="${produto.valor_Produto}" id="valP" name="valP" min="0.01" step="0.01" required/>-->
                                     </div>	
                                 </div>
                                 <div class="form-group">
