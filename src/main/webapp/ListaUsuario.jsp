@@ -54,7 +54,7 @@
 
             <div class="alert alert-danger" role="alert">Erro ao listar usuários, tente novamente</div>
 
-            <!-- Page Content  -->
+            <!-- Page Content -->
 
             <div id="page-content-wrapper">
                 <div class="container-fluid">
