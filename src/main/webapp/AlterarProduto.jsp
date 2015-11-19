@@ -51,17 +51,17 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
-                     <!-- Alert --> 
+                    <!-- Alert --> 
                     <div class="alert alert-success" role="alert">Produto Atualizado com sucesso!</div>
-                    
+
                     <div class="alert alert-danger" role="alert">Erro ao Atualizar Produto, tente novamente</div>
-                    
+
                     <div class="row">
                         <h1 class="well">Alterar Produtos</h1>
                         <div class="col-md-12">
                             <form action="BuscarPorIdProduto" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" name="idP" placeholder="Buscar Produto" class="form-control search-query" autofocus>
+                                    <input type="number" name="idP" value="${produto.idProduto}" placeholder="Buscar Produto" class="form-control search-query" autofocus>
                                 </div>
                                 <div class="col-md-6">
                                     <button  type="submit" class="btn btn-info">Pesquisar</button>
@@ -74,6 +74,7 @@
 
                         <form action="AlterarProduto" method="post">
                             <div class="col-sm-12">
+
                                 <div class="form-group">
                                     <label for="nomeP"><b>Nome do Produto</b></label>
                                     <input type="text" class="form-control" value="${produto.nomeProduto}" id="nomeP" name="nameP" maxlength="255" required/>
@@ -81,7 +82,7 @@
                                 <div class="row">  
                                     <div class="col-sm-6 form-group">
                                         <label for="codP"><b>Código do Produto</b></label>
-                                        <input type="number" class="form-control" id="codP" value="${produto.codProduto}" name="codP" required/>
+                                        <input type="number" class="form-control" readonly="readonly" id="codP" value="${produto.codProduto}" name="codP" required/>
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label for="fabP"><b>Fabricante</b></label>
@@ -102,11 +103,23 @@
                                     <div class="col-sm-6 form-group">
                                         <label for="cor"><b>Cor</b></label>
                                         <input type="text" class="form-control" value="${produto.corProduto}" id="corP" name="corP" maxlength="20" required/>
-                                    </div>		
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+                                            <label for="tipoP"><b>Tipo do Produto</b></label>
+                                            <select name="tipoP" class="form-control">
+                                                <option value="default" selected="selected" disabled>Selecione</option>
+                                                <option value="audio">Audio</option>
+                                                <option value="cordas">Cordas</option>
+                                                <option value="percurssao">Percurssão</option>
+                                                <option value="tecla">Teclas</option>
+                                            </select>
+                                        </div>
+
                                     <div class="col-sm-6 form-group">
                                         <label for="val"><b>Valor</b></label>
                                         <input type="text" class="form-control" id="valP" value="${produto.valorProduto}" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>  
-                                        
+
                                     </div>	
                                 </div>
                                 <div class="form-group">

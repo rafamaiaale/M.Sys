@@ -127,7 +127,6 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
                 funcionario.setSenhaFuncionario(rs.getString("Senha_Funcionario"));
                 funcionario.setCargoFuncionario(rs.getString("Cargo_Funcionario"));
                 funcionario.setEmailFuncionario(rs.getString("Email_Funcionario"));
-                funcionario.setFilialFuncionario(rs.getString("Marca_Produto"));
                 funcionario.setSituacaoFuncionario(rs.getString("Situacao_Funcionario"));
                 funcionario.setPerfilFuncionario(rs.getString("Perfil_Funcionario"));
 

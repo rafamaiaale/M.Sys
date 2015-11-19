@@ -59,9 +59,9 @@
                     <div class="row">
                         <h1 class="well">Alterar Usuários</h1>
                         <div class="col-md-12">
-                            <form action="BuscarPorIdProduto" method="post">
+                            <form action="BuscarPorIdUsuario" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" name="idP" placeholder="Buscar Usuário" class="form-control search-query" autofocus>
+                                    <input type="text" name="idF" placeholder="Buscar Usuário" class="form-control search-query" autofocus>
                                 </div>
                                 <div class="col-md-6">
                                     <button  type="submit" class="btn btn-info">Pesquisar</button>
@@ -76,33 +76,33 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="nome"><b>Nome do Usuário</b></label>
-                                    <input type="text" class="form-control" id="nome" name="name" maxlength="100" required autofocus/>
+                                    <input type="text" class="form-control" id="nome" name="name" value="${usuario.nomeUsuario}" maxlength="100" required autofocus/>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="login"><b>Login</b></label>
-                                        <input type="text" class="form-control" id="login" name="login" maxlength="45" required/>
+                                        <input type="text" class="form-control" id="login" name="login" value="${usuario.loginUsuario}" maxlength="45" required/>
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label for="senha"><b>Senha</b></label>
-                                        <input type="password" class="form-control" id="pass" name="password" maxlength="45" minlength="5" required/>
+                                        <input type="password" class="form-control" id="pass" name="password" value="${usuario.senhaUsuario}" maxlength="45" minlength="5" required/>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label for="email"><b>E-mail</b></label>
-                                        <input type="email" class="form-control" id="email" name="email" maxlength="100" required/>
+                                        <input type="email" class="form-control" id="email" value="${usuario.emailUsuario}" name="email" maxlength="100" required/>
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label for="filial"><b>Filial - UF</b></label>
-                                        <input type="text" class="form-control" id="filial" maxlength="2" pattern="[A-Z\s]+$" required/>
+                                        <input type="text" class="form-control" id="filial" value="${usuario.filialUsuario}" maxlength="2" pattern="[A-Z\s]+$" required/>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <div class="row">
                                             <div class="col-sm-12 form-group">
-                                                <label for="tipP"><b>Tipo do Usuário</b></label>
+                                                <label for="tipoP"><b>Tipo do Usuário</b></label>
                                                 <select name="perfil" class="form-control">
                                                     <option value="default" selected="selected" disabled>Selecione</option>
                                                     <option value="Suporte">Suporte</option>
@@ -112,11 +112,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 form-group">
-                                        <hr/>
-                                        <label><b>Ativo</b></label>
-                                        <input type="checkbox" id="status" value="Ativo" checked="checked" title="Ativo"/>
-                                    </div>
+
                                 </div>
                                 <div class="form-group">
 

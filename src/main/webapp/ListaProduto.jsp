@@ -68,20 +68,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>30</td>
-                                <td>Violão aço cutaway </td>
-                                <td>Tagima</td>
-                                <td>Corda</td>
-                                <td>Preto</td>
-                                <td>R$ 450</td>
-                                <td>T635</td>
-                                <td>10</td>
 
-                                <td><a class="btn btn-default" href="#">Editar</a></td>
-                                <td><a class="btn btn-danger" href="#">Deletar</a></td>
-                            </tr>
 
                             <c:forEach items="${produtos}" var="produto">
                                 <tr>
@@ -94,6 +81,7 @@
                                     <td><c:out value="${produto.valorProduto}" /></td>
                                     <td><c:out value="${produto.modeloProduto}" /></td>
                                     <td><c:out value="${produto.qntProduto}" /></td>
+                                    <td><a class="btn btn-default" href="BuscarPorIdProduto" id="botaoEditar">Editar</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>
