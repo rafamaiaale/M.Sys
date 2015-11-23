@@ -7,12 +7,9 @@ package br.senac.tads.pi3.codecompass.msys.control;
 
 import br.senac.tads.pi3.codecompass.msys.DAO.FuncionarioDAO;
 import br.senac.tads.pi3.codecompass.msys.DAO.GenericDAO;
-import br.senac.tads.pi3.codecompass.msys.DAO.ProdutoDAO;
 import br.senac.tads.pi3.codecompass.msys.model.Funcionario;
-import br.senac.tads.pi3.codecompass.msys.model.Produto;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author user
  */
-@WebServlet(name = "BuscarPorIdUsuario", urlPatterns = {"/BuscarPorIdUsuario"})
-public class BuscarPorIdUsuario extends HttpServlet {
+@WebServlet(name = "AlterarUsuario", urlPatterns = {"/AlterarUsuario"})
+public class AlterarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,20 +36,43 @@ public class BuscarPorIdUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        try {
-
-            Integer idUsuario = Integer.parseInt(request.getParameter("idF"));
+        String mensagem = null;
+        String nomeFuncionario = request.getParameter("name");
+        String loginFuncionario = request.getParameter("login");
+        String senhaFuncionario = request.getParameter("password");
+        String emailFuncionario = request.getParameter("email");
+        String cargoFuncionario = request.getParameter("cargo");
+        String filialFuncionario = request.getParameter("filial");
+        String perfilFuncionario = request.getParameter("perfil");
+        String situacaoFuncionario = request.getParameter("situacao");
+        
+        Funcionario func = new Funcionario();
+        
+        func.setNomeFuncionario(nomeFuncionario);
+        func.setLoginFuncionario(loginFuncionario);
+        func.setSenhaFuncionario(senhaFuncionario);
+        func.setEmailFuncionario(emailFuncionario);
+        func.setCargoFuncionario(cargoFuncionario);
+        func.setFilialFuncionario(filialFuncionario);
+        func.setPerfilFuncionario(perfilFuncionario);
+        func.setSituacaoFuncionario(situacaoFuncionario);
+        
+        try{
             GenericDAO dao = new FuncionarioDAO();
-            List<Funcionario> listaUsuario = dao.buscarPorID(idUsuario);
-            request.setAttribute("usuario", listaUsuario.get(0));
-
-        } catch (Exception ex) {
-            System.out.println("Problemas ao listar Usuario! Erro: " + ex.getMessage());
+            if(dao.alterar(func)){
+                mensagem="Funcionario cadastrado com sucesso!!";
+            }
+            else{
+                mensagem="Problemas ao cadastrar Funcionario";
+            }
+            request.setAttribute("mensagem", mensagem);
+            RequestDispatcher rd = request.getRequestDispatcher("/MenuUsuario.jsp");
+            rd.forward(request, response);
+        }
+        catch (Exception ex){
+            System.out.println("Problemas no Servlet ao cadastrar produto! Erro: " + ex.getMessage());
             ex.printStackTrace();
         }
-
-        RequestDispatcher rd = request.getRequestDispatcher("AlterarUsuario.jsp");
-        rd.forward(request, response);
 
     }
 

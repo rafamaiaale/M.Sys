@@ -121,12 +121,12 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
             while (rs.next()) {
                 Funcionario funcionario = new Funcionario();
 
-                funcionario.setIdFuncionario(rs.getInt("ID_Funcionario"));
-                funcionario.setNomeFuncionario(rs.getString("Nome_Funcionario"));
-                funcionario.setLoginFuncionario(rs.getString("Login_Funcionario"));
+                funcionario.setNomeFuncionario(rs.getString("NOME_FUNCIONARIO"));
+                funcionario.setLoginFuncionario(rs.getString("LOGIN_FUNCIONARIO"));
                 funcionario.setSenhaFuncionario(rs.getString("Senha_Funcionario"));
                 funcionario.setCargoFuncionario(rs.getString("Cargo_Funcionario"));
                 funcionario.setEmailFuncionario(rs.getString("Email_Funcionario"));
+                funcionario.setFilialFuncionario(rs.getString("Filial_Funcionario"));
                 funcionario.setSituacaoFuncionario(rs.getString("Situacao_Funcionario"));
                 funcionario.setPerfilFuncionario(rs.getString("Perfil_Funcionario"));
 
@@ -154,11 +154,10 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
         PreparedStatement stmt = null;
         String sql = "update funcionario set Nome_Funcionario=?, Login_Funcionario=?, Senha_Funcionario=?,"
                 + "Cargo_Funcionario=?, Email_Funcionario=?, Filial_Funcionario=?, Situacao_Funcionario=?,"
-                + "Perfil_Funcionario=? where ";
+                + "Perfil_Funcionario=? where Login_Funcionario=?";
 
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, funcionario.getIdFuncionario());
             stmt.setString(1, funcionario.getNomeFuncionario());
             stmt.setString(2, funcionario.getLoginFuncionario());
             stmt.setString(3, funcionario.getSenhaFuncionario());
@@ -167,6 +166,7 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
             stmt.setString(6, funcionario.getFilialFuncionario());
             stmt.setString(7, funcionario.getSituacaoFuncionario());
             stmt.setString(8, funcionario.getPerfilFuncionario());
+            stmt.setString(9, funcionario.getLoginFuncionario());
             stmt.executeUpdate();
             return true;
 

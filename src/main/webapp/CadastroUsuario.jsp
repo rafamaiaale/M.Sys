@@ -20,7 +20,7 @@
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet"> 
         <script type="text/javascript" src="MascaraValidacao.js"></script>
-        
+
         <title>Gestão de Usuários</title>
 
     </head>
@@ -73,12 +73,20 @@
                                             <input type="password" class="form-control" id="pass" name="password" maxlength="45" minlength="5" required/>
                                         </div>	
                                     </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12 form-group">
+                                            <label for="tipP"><b>Cargo</b></label>
+                                            <select name="cargo" class="form-control">
+                                                <option value="default" selected="selected" disabled>Selecione</option>
+                                                <option value="Gerente">Gerente</option>
+                                                <option value="Assistente" >Assistente</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     
                                     <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <label for="login"><b>Cargo</b></label>
-                                            <input type="text" class="form-control" id="cargo" name="cargo" maxlength="45" required/>
-                                        </div>
                                         <div class="col-sm-6 form-group">
                                             <label for="email"><b>E-mail</b></label>
                                             <input type="email" class="form-control" id="email" name="email" maxlength="100" required/>

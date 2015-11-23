@@ -66,29 +66,16 @@
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>Login</th>
+                                <th>Cargo</th>
                                 <th>E-mail</th>
                                 <th>Filial - UF</th>
-                                <th>Tipo do Usuário</th>
-                                <th>Ativo</th>
                                 <th>Departamento</th>
+                                <th>Ativo</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>CodeCompass</td>
-                                <td>Admin</td>
-                                <td>codecompass@admin.com</td>
-                                <td>SP</td>
-                                <td>admin</td>
-                                <td>1</td>
-                                <td>Comercial</td>
- 
-                                <td><a class="btn btn-default" href="#">Editar</a></td>
-                                <td><a class="btn btn-danger" href="#">Deletar</a></td>
-                            </tr>
 
                         <c:forEach items="${funcionarios}" var="funcionarios">
                             <tr>
@@ -98,8 +85,8 @@
                             <td><c:out value="${funcionarios.cargoFuncionario}" /></td>
                             <td><c:out value="${funcionarios.emailFuncionario}" /></td>
                             <td><c:out value="${funcionarios.filialFuncionario}" /></td>
-                            <td><c:out value="${funcionarios.situacaoFuncionario}" /></td>
                             <td><c:out value="${funcionarios.perfilFuncionario}" /></td>
+                            <td><c:out value="${funcionarios.situacaoFuncionario}" /></td>
                             </tr>
                         </c:forEach>
                         </tbody>
