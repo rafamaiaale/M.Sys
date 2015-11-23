@@ -67,7 +67,7 @@ function checkQuant(valor) {
     }
 }
 
-function mensagem(){
-    
-    
+function mensagem() {
+    document.getElementById("true").style.display = "block";
+    document.getElementById("false").style.display = "block";
 }

@@ -92,7 +92,7 @@
                             <div class="col-md-12 spacer">
                                 <div class="row">
                                     <button id="btS" class="btn btn-block btn-primary" type="submit">Salvar Venda</button>
-                                    <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuProduto.jsp'">Cancelar</button>	
+                                    <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuVenda.jsp'">Cancelar</button>	
                                 </div>
                             </div>
                         </div>

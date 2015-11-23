@@ -49,9 +49,9 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <!-- Alert --> 
-                    <div class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
+                    <div id="true" class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
 
-                    <div class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente</div>
+                    <div id="false" class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente</div>
 
                     <div class="container">
                         <h1 class="well">Cadastro de Usuários</h1>

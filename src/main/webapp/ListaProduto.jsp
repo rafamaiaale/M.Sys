@@ -8,7 +8,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <meta http-equiv="refresh" content="25"/> <!--PARA TESTE--> 
         <title>Gestão de Produtos</title>
 
 
@@ -26,16 +25,16 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="MenuProduto.jsp">Menu - Produto</a>
+                        <a href="MenuProdutos.jsp">Menu - Produto</a>
                     </li>
                     <li>
-                        <a href="CadastroProduto.jsp">Cadastrar Produto</a>
+                        <a href="CadastroProdutos.jsp">Cadastrar Produto</a>
                     </li>
                     <li>
-                        <a href="ListarProduto">Listar Produto</a>
+                        <a href="ListarProdutos">Listar Produto</a>
                     </li>
                     <li>
-                        <a href="AlterarProduto.jsp">Atualizar Produto</a>
+                        <a href="AlterarProdutos.jsp">Atualizar Produto</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do sistema</a>

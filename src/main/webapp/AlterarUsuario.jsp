@@ -52,9 +52,9 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <!-- Alert -->
-                    <div class="alert alert-success" role="alert">Usuário Atualizado com sucesso!</div>
+                    <div id="true" class="alert alert-success" role="alert">Usuário Atualizado com sucesso!</div>
 
-                    <div class="alert alert-danger" role="alert">Erro ao atualizar usuário, tente novamente</div>
+                    <div id="false" class="alert alert-danger" role="alert">Erro ao atualizar usuário, tente novamente</div>
 
                     <div class="row">
                         <h1 class="well">Alterar Usuários</h1>

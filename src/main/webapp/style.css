@@ -89,3 +89,7 @@ body {
         padding: 50px;
     }
 }
+
+#true, #false{
+    display: none;
+}
