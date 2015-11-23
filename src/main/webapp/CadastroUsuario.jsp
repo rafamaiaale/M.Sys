@@ -111,7 +111,7 @@
 
                                     </div>
                                     <span id="msg" hidden>Cadastro realizado com sucesso!</span>
-                                    <button id="btS" class="btn btn-block btn-info" type="submit">Salvar</button>
+                                    <button id="btS" class="btn btn-block btn-primary" type="submit">Salvar</button>
                                     <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuUsuario.jsp'">Voltar</button>	
                                 </div>
                             </form>
@@ -124,5 +124,3 @@
         <script src="content/js/bootstrap.min.js"></script>
     </body>
 </html>
-<!-- /#sidebar-wrapper -->
-<!-- Page Content -->

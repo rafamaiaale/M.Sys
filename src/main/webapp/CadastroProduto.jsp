@@ -108,7 +108,7 @@
                                     <div class="form-group">
 
                                     </div>
-                                    <button id="btS" class="btn btn-block btn-info" type="submit">Salvar</button>
+                                    <button id="btS" class="btn btn-block btn-primary" type="submit">Salvar</button>
                                     <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuProduto.jsp'">Voltar</button>	
                                 </div>
                             </form>

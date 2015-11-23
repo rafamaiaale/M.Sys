@@ -31,16 +31,21 @@
         <div id="wrapper">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
-
-                    <!-- Produtos -->
+                    <!-- Vendas -->
                     <li class="sidebar-brand">
                         <a href="MenuVenda.jsp">Gestão de Vendas</a>
                     </li>
                     <li>
-                        <a href="#">Em Construção</a>
+                        <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
                     </li>
                     <li>
-                        <a href="#">Em Construção</a>
+                        <a href="">Relatório de vendas</a>
+                    </li>
+                    <li>
+                        <a href="RelatorioFilial.jsp">Relatório de Filial</a>
+                    </li>
+                    <li>
+                        <a href="RelatorioProduto.jsp">Relatório de Produto</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do Sistema</a>
@@ -57,7 +62,7 @@
 
                             <div class="jumbotron">
                                 <h1>Olá, Bem vindo!</h1>
-                               <div class="panel panel-default">
+                                <div class="panel panel-default">
                                     <div class="panel-body" id="menu-toggle">
                                         <h3><span class="label label-default">Gestão de Vendas</span></h3>
                                     </div>

@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : Nov 11, 2015, 1:37:58 PM
-    Author     : Shuyuan
+    Author     : Lucas.Domingues
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

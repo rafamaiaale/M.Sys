@@ -58,13 +58,13 @@
 
                     <div class="row">
                         <h1 class="well">Alterar Produtos</h1>
-                        <div class="col-md-12">
+                        <div class="col-md-12 well">
                             <form action="BuscarPorIdProduto" method="post">
                                 <div class="col-md-6">
                                     <input type="number" name="idP" value="${produto.idProduto}" placeholder="Buscar Produto" class="form-control search-query" autofocus>
                                 </div>
                                 <div class="col-md-6">
-                                    <button  type="submit" class="btn btn-info">Pesquisar</button>
+                                    <button  type="submit" class="btn btn-default">Pesquisar</button>
                                 </div>
                             </form>
                         </div>
@@ -73,66 +73,69 @@
                         </div>
 
                         <form action="AlterarProduto" method="post">
-                            <div class="col-sm-12">
-
-                                <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="form-group col-md-6">
                                     <label for="nomeP"><b>Nome do Produto</b></label>
                                     <input type="text" class="form-control" value="${produto.nomeProduto}" id="nomeP" name="nameP" maxlength="255" required/>
                                 </div>
-                                <div class="row">  
-                                    <div class="col-sm-6 form-group">
-                                        <label for="codP"><b>Código do Produto</b></label>
-                                        <input type="number" class="form-control" readonly="readonly" id="codP" value="${produto.codProduto}" name="codP" required/>
-                                    </div>
-                                    <div class="col-sm-6 form-group">
-                                        <label for="fabP"><b>Fabricante</b></label>
-                                        <input type="text" class="form-control" id="fab" value="${produto.fabricanteProduto}" name="fabP" maxlength="45" required/>
-                                    </div>	
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 form-group">
-                                        <label for="model"><b>Modelo</b></label>
-                                        <input type="text" class="form-control" id="modelP" value="${produto.modeloProduto}" name="modelP" maxlength="100" required/>
-                                    </div>	
-                                    <div class="col-sm-6 form-group">
-                                        <label for="quant"><b>Quantidade</b></label>
-                                        <input type="number" class="form-control" id="quanP" value="${produto.qntProduto}" name="quanP" onblur="checkQuant(this.value)" required/>
-                                    </div>	
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 form-group">
-                                        <label for="cor"><b>Cor</b></label>
-                                        <input type="text" class="form-control" value="${produto.corProduto}" id="corP" name="corP" maxlength="20" required/>
-                                    </div>
 
-                                    <div class="col-sm-12 form-group">
-                                            <label for="tipoP"><b>Tipo do Produto</b></label>
-                                            <select name="tipoP" class="form-control">
-                                                <option value="default" selected="selected" disabled>Selecione</option>
-                                                <option value="audio">Audio</option>
-                                                <option value="cordas">Cordas</option>
-                                                <option value="percurssao">Percurssão</option>
-                                                <option value="tecla">Teclas</option>
-                                            </select>
-                                        </div>
-
-                                    <div class="col-sm-6 form-group">
-                                        <label for="val"><b>Valor</b></label>
-                                        <input type="text" class="form-control" id="valP" value="${produto.valorProduto}" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>  
-
-                                    </div>	
+                                <div class="form-group col-md-6">
+                                    <label for="codP"><b>Código do Produto</b></label>
+                                    <input type="number" class="form-control" readonly="readonly" id="codP" value="${produto.codProduto}" name="codP" required/>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-md-6">
+                                    <label for="fabP"><b>Fabricante</b></label>
+                                    <input type="text" class="form-control" id="fab" value="${produto.fabricanteProduto}" name="fabP" maxlength="45" required/>
+                                </div>	
 
+
+                                <div class="form-group col-md-6">
+                                    <label for="model"><b>Modelo</b></label>
+                                    <input type="text" class="form-control" id="modelP" value="${produto.modeloProduto}" name="modelP" maxlength="100" required/>
+                                </div>	
+                                <div class="form-group col-md-6">
+                                    <label for="quant"><b>Quantidade</b></label>
+                                    <input type="number" class="form-control" id="quanP" value="${produto.qntProduto}" name="quanP" onblur="checkQuant(this.value)" required/>
+                                </div>	
+
+
+                                <div class="form-group col-md-6">
+                                    <label for="cor"><b>Cor</b></label>
+                                    <input type="text" class="form-control" value="${produto.corProduto}" id="corP" name="corP" maxlength="20" required/>
                                 </div>
-                                <button id="btS" class="btn btn-block btn-info" type="submit">Atualizar</button>
-                                <!--<button id="btV" class="btn btn-block btn-danger"  type="submit" onClick="history.go(-1)">Voltar</button>	-->
+
+                                <div class="form-group col-md-6">
+                                    <label for="tipoP"><b>Tipo do Produto</b></label>
+                                    <select name="tipoP" class="form-control">
+                                        <option value="default" selected="selected" disabled>Selecione</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="cordas">Cordas</option>
+                                        <option value="percurssao">Percurssão</option>
+                                        <option value="tecla">Teclas</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="val"><b>Valor</b></label>
+                                    <input type="text" class="form-control" id="valP" value="${produto.valorProduto}" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>  
+
+                                </div>	
                             </div>
-                        </form>
+                            <div class="form-group">
+
+                            </div>
+                            <div class="col-md-12 spacer">
+                                <div class="row">
+                                    <button id="btS" class="btn btn-block btn-primary" type="submit">Atualizar</button>
+                                    <!--<button id="btV" class="btn btn-block btn-danger"  type="submit" onClick="history.go(-1)">Voltar</button>	-->
+                                </div>
+                            </div>
+                        </form>  
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
