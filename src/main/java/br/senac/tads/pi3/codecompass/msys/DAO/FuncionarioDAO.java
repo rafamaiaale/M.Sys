@@ -105,6 +105,49 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
 
         return resultado;
     }
+    
+    public List<Funcionario> listarPorPerfilComercial() {
+        List<Funcionario> resultado = new ArrayList<Funcionario>();
+        PreparedStatement stmt = null;
+        ResultSet rs = null; //rs=coluna do banco
+
+        String sql = "Select * from Funcionario where Perfil_Funcionario = 'COM'";
+
+        try {
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Funcionario funcionario = new Funcionario();
+
+                funcionario.setIdFuncionario(rs.getInt("ID_FUNCIONARIO"));
+                funcionario.setNomeFuncionario(rs.getString("NOME_FUNCIONARIO"));
+                funcionario.setLoginFuncionario(rs.getString("LOGIN_FUNCIONARIO"));
+                funcionario.setSenhaFuncionario(rs.getString("Senha_Funcionario"));
+                funcionario.setCargoFuncionario(rs.getString("Cargo_Funcionario"));
+                funcionario.setEmailFuncionario(rs.getString("Email_Funcionario"));
+                funcionario.setFilialFuncionario(rs.getString("Filial_Funcionario"));
+                funcionario.setSituacaoFuncionario(rs.getString("Situacao_Funcionario"));
+                funcionario.setPerfilFuncionario(rs.getString("Perfil_Funcionario"));
+
+                resultado.add(funcionario);
+
+            }
+        } catch (Exception ex) {
+            System.out.println("Problemas as listar Produtos! Erro: " + ex.getMessage());
+            ex.printStackTrace();
+        } finally {
+            try {
+                ConnectionFactory.closeConnection(conn, stmt);
+            } catch (Exception ex) {
+                System.out.println("Problemas ao fechar os parâmetros de conexão! Erro: " + ex.getMessage());
+                ex.printStackTrace();
+            }
+
+        }
+
+        return resultado;
+    }
 
     
     public List<Funcionario> buscarPorID(Integer id) {
@@ -148,6 +191,8 @@ public class FuncionarioDAO implements GenericDAO<Funcionario> {
 
         return resultado;
     }
+    
+    
     
     public Boolean alterar(Funcionario object) {
         Funcionario funcionario = (Funcionario) object;
