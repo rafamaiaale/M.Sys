@@ -57,7 +57,7 @@ public class RetirarDoEstoque extends HttpServlet {
             }
 
             request.setAttribute("mensagem", mensagem);
-            RequestDispatcher rd = request.getRequestDispatcher("/MenuProduto.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/MenuVenda.jsp");
             rd.forward(request, response);
         } catch (Exception ex) {
             System.out.println("Problemas no Servlet ao cadastrar produto! Erro: " + ex.getMessage());

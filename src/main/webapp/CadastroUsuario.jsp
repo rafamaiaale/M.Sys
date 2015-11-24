@@ -50,7 +50,6 @@
                 <div class="container-fluid">
                     <!-- Alert --> 
                     <div id="true" class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
-
                     <div id="false" class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente</div>
 
                     <div class="container">
@@ -78,8 +77,8 @@
                                     <div class="row">
                                         <div class="col-sm-12 form-group">
                                             <label for="tipP"><b>Cargo</b></label>
-                                            <select name="cargo" class="form-control">
-                                                <option value="default" selected="selected" disabled>Selecione</option>
+                                            <select name="cargo" class="form-control" required>
+                                                <option selected="selected" disabled>Selecione</option>
                                                 <option value="Gerente">Gerente</option>
                                                 <option value="Assistente" >Assistente</option>
                                             </select>
@@ -99,8 +98,8 @@
                                     <div class="row">
                                         <div class="col-sm-12 form-group">
                                             <label for="tipP"><b>Tipo do Usuário</b></label>
-                                            <select name="perfil" class="form-control">
-                                                <option value="default" selected="selected" disabled>Selecione</option>
+                                            <select name="perfil" class="form-control" required>
+                                                <option selected="selected" disabled>Selecione</option>
                                                 <option value="T.I">Suporte</option>
                                                 <option value="PRD" >Produção</option>
                                                 <option value="COM">Vendedor</option>
@@ -110,7 +109,6 @@
                                     <div class="form-group">
 
                                     </div>
-                                    <span id="msg" hidden>Cadastro realizado com sucesso!</span>
                                     <button id="btS" class="btn btn-block btn-primary" type="submit">Salvar</button>
                                     <button id="btV" class="btn btn-block btn-danger" type="submit" onclick="javascript:window.location = 'MenuUsuario.jsp'">Voltar</button>	
                                 </div>

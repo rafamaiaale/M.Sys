@@ -45,7 +45,7 @@ public class EfetuarVenda extends HttpServlet {
 
         String mensagem = null;
 
-        if (qntSolicitada < qntProduto) {
+        if (qntSolicitada <= qntProduto) {
 
             Double valorProduto = Double.parseDouble(request.getParameter("valorP"));
             String dtVendaStr = "2010-01-01";
@@ -87,6 +87,9 @@ public class EfetuarVenda extends HttpServlet {
 
         } else {
             mensagem = "Esta quantidade não possui em estoque";
+            request.setAttribute("mensagem", mensagem);
+            RequestDispatcher rd = request.getRequestDispatcher("/CadastrarVenda.jsp");
+            rd.forward(request, response);
         }
 
     }

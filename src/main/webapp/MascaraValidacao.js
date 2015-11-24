@@ -60,14 +60,17 @@ function MascaraMoeda(objTextBox, SeparadorMilesimo, SeparadorDecimal, e) {
 
 function checkQuant(valor) {
     var regra = /^[0-9]+$/;
-    if (valor.match(regra) || valor===0) {
+    if (valor.match(regra) || valor === 0) {
     } else {
         alert("Quantidade invalida!");
-        document.getElementById("quanP").focus();   
+        document.getElementById("quanP").focus();
     }
 }
 
-function mensagem() {
+function mensagemTrue() {
     document.getElementById("true").style.display = "block";
+}
+
+function mensagemFalse() {
     document.getElementById("false").style.display = "block";
 }

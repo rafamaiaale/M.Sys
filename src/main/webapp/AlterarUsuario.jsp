@@ -16,7 +16,6 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
 
         <title>Alterar Usuários</title>
-
         <!-- Bootstrap Core CSS -->
         <link href="content/css/bootstrap.min.css" rel="stylesheet">
 
@@ -53,9 +52,7 @@
                 <div class="container-fluid">
                     <!-- Alert -->
                     <div id="true" class="alert alert-success" role="alert">Usuário Atualizado com sucesso!</div>
-
-                    <div id="false" class="alert alert-danger" role="alert">Erro ao atualizar usuário, tente novamente</div>
-
+                    <div id="false" class="alert alert-danger" role="alert">Erro ao atualizar usuário, tente novamente!</div>
                     <div class="row">
                         <h1 class="well">Alterar Usuários</h1>
                         <div class="col-md-12 well">
@@ -68,7 +65,6 @@
                                 </div>
                             </form>
                         </div>
-
                         <div class="spacer">
                         </div>
 
@@ -124,20 +120,17 @@
                                         <option value="0" >Desativo</option>
                                     </select>
                                 </div>
-
                             </div>
                             <div class="form-group">
-
                             </div>
                             <div class="col-md-12 spacer">
                                 <div class="row">
                                     <button id="btS" class="btn btn-block btn-primary" type="submit">Atualizar</button>
-                                    <!--<button id="btV" class="btn btn-block btn-danger"  type="submit" onclick="javascript:window.location = 'MenuUsuario.jsp'">Voltar</button>-->
+                                    <button id="btV" class="btn btn-block btn-danger"  type="submit" onclick="javascript:window.location = 'MenuUsuario.jsp'">Voltar</button>
                                 </div>
                             </div>
                         </form>    
                     </div>
-
                 </div>
             </div>
         </div>

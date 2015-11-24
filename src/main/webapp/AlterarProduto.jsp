@@ -106,8 +106,8 @@
 
                                 <div class="form-group col-md-6">
                                     <label for="tipoP"><b>Tipo do Produto</b></label>
-                                    <select name="tipoP" class="form-control">
-                                        <option value="default" selected="selected" disabled>Selecione</option>
+                                    <select name="tipoP" class="form-control" required>
+                                        <option value="default" selected="selected"  disabled>Selecione</option>
                                         <option value="audio">Audio</option>
                                         <option value="cordas">Cordas</option>
                                         <option value="percurssao">Percurssão</option>
@@ -127,7 +127,7 @@
                             <div class="col-md-12 spacer">
                                 <div class="row">
                                     <button id="btS" class="btn btn-block btn-primary" type="submit">Atualizar</button>
-                                    <!--<button id="btV" class="btn btn-block btn-danger"  type="submit" onClick="history.go(-1)">Voltar</button>	-->
+                                    <button id="btV" class="btn btn-block btn-danger"  type="submit" onclick="javascript:window.location = 'MenuProduto.jsp'">Voltar</button>
                                 </div>
                             </div>
                         </form>  

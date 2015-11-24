@@ -9,7 +9,6 @@ import br.senac.tads.pi3.codecompass.msys.DAO.GenericDAO;
 import br.senac.tads.pi3.codecompass.msys.DAO.ProdutoDAO;
 import br.senac.tads.pi3.codecompass.msys.model.Produto;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,8 +34,8 @@ public class CadastrarProduto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String mensagem=null;
+
+        String mensagem = null;
         Integer codProduto = Integer.parseInt(request.getParameter("codP"));
         String nomeProduto = request.getParameter("nameP");
         String nomeFabricante = request.getParameter("fabP");
@@ -45,9 +44,9 @@ public class CadastrarProduto extends HttpServlet {
         String corProduto = request.getParameter("corP");
         Double valorProduto = Double.parseDouble(request.getParameter("valP"));
         Integer qntProduto = Integer.parseInt(request.getParameter("quanP"));
-        
+
         Produto produto = new Produto();
-        
+
         produto.setCodProduto(codProduto);
         produto.setNomeProduto(nomeProduto);
         produto.setFabricanteProduto(nomeFabricante);
@@ -56,29 +55,22 @@ public class CadastrarProduto extends HttpServlet {
         produto.setCorProduto(corProduto);
         produto.setValorProduto(valorProduto);
         produto.setQntProduto(qntProduto);
-        
-        try{
+
+        try {
             GenericDAO dao = new ProdutoDAO();
-            if(dao.cadastrar(produto)){
-                mensagem="Produto cadastrado com sucesso!!";
-            }
-            else{
-                mensagem="Problemas ao cadastrar Produto";
+            if (dao.cadastrar(produto)) {
+                mensagem = "Produto cadastrado com sucesso!!";
+            } else {
+                mensagem = "Problemas ao cadastrar Produto";
             }
             request.setAttribute("mensagem", mensagem);
             RequestDispatcher rd = request.getRequestDispatcher("/MenuProduto.jsp");
             rd.forward(request, response);
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("Problemas no Servlet ao cadastrar produto! Erro: " + ex.getMessage());
             ex.printStackTrace();
         }
-                
-        
-        
-        
-        
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

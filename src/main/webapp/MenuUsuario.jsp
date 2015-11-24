@@ -15,15 +15,11 @@
         <meta name="author" content="">
         <link href="style.css" rel="stylesheet" type="text/css"/>
 
-
         <title>Gestão de Usuários</title>
-
         <!-- Bootstrap Core CSS -->
         <link href="content/css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Custom CSS -->
         <link href="content/css/simple-sidebar.css" rel="stylesheet">
-
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
@@ -49,7 +45,6 @@
                 </ul>
             </div>
             <!-- /#sidebar-wrapper -->
-
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
@@ -72,13 +67,10 @@
                 </div>
             </div>
         </div>
-
         <!-- jQuery -->
         <script src="content/js/jquery.js"></script>
-
         <!-- Bootstrap Core JavaScript -->
         <script src="content/js/bootstrap.min.js"></script>
-
         <!-- Menu Toggle Script -->
         <script>
             $("#menu-toggle").click(function (e) {

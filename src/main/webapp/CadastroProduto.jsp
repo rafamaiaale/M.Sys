@@ -101,8 +101,7 @@
                                         </div>		
                                         <div class="col-sm-6 form-group">
                                             <label for="val"><b>Valor</b></label>
-                                            <input type="text" class="form-control" id="valP" name="valP" onKeyPress="return(MascaraMoeda(this, '.', ',', event))" required/>
-                                            <!--<input type="number" class="form-control" id="valP" name="valP" min="0.01" step="0.01" required/>-->
+                                            <input type="number" class="form-control" id="valP" name="valP" min="0.01" step="0.01" required/>
                                         </div>	
                                     </div>
                                     <div class="form-group">

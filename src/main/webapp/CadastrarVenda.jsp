@@ -51,6 +51,10 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <div class="row">
+                                            <!-- Alert --> 
+                    <div id="true" class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
+                    <div id="false" class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente!</div>
+
                         <h3 class="well">Registrar Vendas</h3>
                         <div class="col-md-12 well">
                             <form action="BuscarProdutoPorIdVenda" method="post">
@@ -72,7 +76,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="nomeP"><b>ID Do Produto</b></label>
-                                <input type="text" name="idProduto" readonly="readonly" value="${produto.idProduto}" placeholder="Buscar um Produto" class="form-control search-query" autofocus>
+                                <input type="text" name="idProduto" readonly="readonly" value="${produto.idProduto}" class="form-control search-query" autofocus>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="fabP"><b>Fabricante</b></label>
