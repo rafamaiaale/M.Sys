@@ -182,5 +182,51 @@ public class VendasDAO {
         return resultado;
 
     }
+    
+    public List<Vendas> relatorioPorProduto(String tipo) {
+
+        List<Vendas> resultado = new ArrayList<Vendas>();
+        PreparedStatement stmt = null;
+        ResultSet rs = null; //rs=coluna do banco
+
+        String sql = "SELECT C.NOME_FUNCIONARIO, C.FILIAL_FUNCIONARIO, B.NOME_PRODUTO, B.TIPO_PRODUTO, A.VALOR_VENDA, A.QNT_VENDA, A.DATA_VENDA FROM VENDAS A\n"
+                + "INNER JOIN PRODUTO B ON A.ID_PRODUTO=B.ID_PRODUTO\n"
+                + "INNER JOIN FUNCIONARIO C ON A.ID_FUNCIONARIO=C.ID_FUNCIONARIO WHERE B.TIPO_PRODUTO = '" + tipo + "'";
+
+        try {
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Vendas venda = new Vendas();
+
+                venda.setNomeFuncionario(rs.getString("NOME_FUNCIONARIO"));
+                venda.setFilialFuncionario(rs.getString("FILIAL_FUNCIONARIO"));
+                venda.setNomeProduto(rs.getString("NOME_PRODUTO"));
+                venda.setTipoProduto(rs.getString("TIPO_PRODUTO"));
+                venda.setValorVendas(rs.getDouble("VALOR_VENDA"));
+                venda.setDataVendas(rs.getDate("DATA_VENDA"));
+                venda.setQntVendas(rs.getInt("QNT_VENDA"));
+
+                resultado.add(venda);
+
+            }
+
+        } catch (Exception ex) {
+            System.out.println("Problemas as listar Produtos! Erro: " + ex.getMessage());
+            ex.printStackTrace();
+        } finally {
+            try {
+                ConnectionFactory.closeConnection(conn, stmt);
+            } catch (Exception ex) {
+                System.out.println("Problemas ao fechar os parâmetros de conexão! Erro: " + ex.getMessage());
+                ex.printStackTrace();
+            }
+
+        }
+
+        return resultado;
+
+    }
 
 }

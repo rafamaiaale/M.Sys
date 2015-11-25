@@ -36,13 +36,10 @@
                         <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
                     </li>
                     <li>
-                        <a href="">Relatório de vendas</a>
+                        <a href="CarregarVendas">Relatório de Filial</a>
                     </li>
                     <li>
-                        <a href="RelatorioFilial.jsp">Relatório de Filial</a>
-                    </li>
-                    <li>
-                        <a href="RelatorioProduto.jsp">Relatório de Produto</a>
+                        <a href="CarregarVendas2">Relatório de Produto</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do Sistema</a>
@@ -57,7 +54,13 @@
                         <div class="col-md-12 well">
                             <form action="CarregarVendasPorFilial" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" name="filial" value="" placeholder="Nome da Filial" class="form-control search-query" autofocus>
+                                    <select name="filial" class="form-control" required>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RE">Recife</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="ES">Espirito Santo</option>  
+                                    </select>
                                 </div>
                                 <div class="col-md-6">
                                     <button  type="submit" class="btn btn-default">Buscar Produtos</button>
@@ -87,18 +90,18 @@
                             <tbody>
 
 
-                            <c:forEach items="${vendas}" var="vendas">
-                                <tr>
-                                    <td><c:out value="${vendas.nomeFuncionario}" /></td>
-                                    <td><c:out value="${vendas.filialFuncionario}" /></td>
-                                    <td><c:out value="${vendas.nomeProduto}" /></td>
-                                    <td><c:out value="${vendas.tipoProduto}" /></td>
-                                    <td><c:out value="${vendas.qntVendas}" /></td>
-                                    <td><c:out value="${vendas.valorVendas}" /></td>
-                                    <td><c:out value="${vendas.dataVendas}" /></td>
-                                </tr>
-                            </c:forEach>
-                            
+                                <c:forEach items="${vendas}" var="vendas">
+                                    <tr>
+                                        <td><c:out value="${vendas.nomeFuncionario}" /></td>
+                                        <td><c:out value="${vendas.filialFuncionario}" /></td>
+                                        <td><c:out value="${vendas.nomeProduto}" /></td>
+                                        <td><c:out value="${vendas.tipoProduto}" /></td>
+                                        <td><c:out value="${vendas.qntVendas}" /></td>
+                                        <td><c:out value="R$ ${vendas.valorVendas}" /></td>
+                                        <td><c:out value="${vendas.dataVendas}" /></td>
+                                    </tr>
+                                </c:forEach>
+
                             </tbody>
                         </table>
                     </div>

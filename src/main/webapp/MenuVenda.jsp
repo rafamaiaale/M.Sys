@@ -36,13 +36,10 @@
                         <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
                     </li>
                     <li>
-                        <a href="">Relatório de vendas</a>
-                    </li>
-                    <li>
                         <a href="CarregarVendas">Relatório de Filial</a>
                     </li>
                     <li>
-                        <a href="RelatorioProduto.jsp">Relatório de Produto</a>
+                        <a href="CarregarVendas2">Relatório de Produto</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do Sistema</a>

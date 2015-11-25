@@ -84,7 +84,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
                                             <label for="email"><b>E-mail</b></label>
@@ -92,7 +92,13 @@
                                         </div>	
                                         <div class="col-sm-6 form-group">
                                             <label for="filial"><b>Filial - UF</b></label>
-                                            <input type="text" class="form-control" id="filial" name="filial" maxlength="2" pattern="[A-Z\s]+$" required/>
+                                            <select name="filial" class="form-control" required>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="RE">Recife</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="ES">Espirito Santo</option>  
+                                            </select>
                                         </div>	
                                     </div>
                                     <div class="row">

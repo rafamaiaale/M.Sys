@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,13 +35,10 @@
                         <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
                     </li>
                     <li>
-                        <a href="">Relatório de vendas</a>
+                        <a href="CarregarVendas">Relatório de Filial</a>
                     </li>
                     <li>
-                        <a href="RelatorioFilial.jsp">Relatório de Filial</a>
-                    </li>
-                    <li>
-                        <a href="RelatorioProduto.jsp">Relatório de Produto</a>
+                        <a href="CarregarVendas2">Relatório de Produto</a>
                     </li>
                     <li>
                         <a href="index.jsp">Deslogar do Sistema</a>
@@ -52,10 +50,9 @@
                     <div class="row">
                         <h3 class="well">Quantidade de produtos vendidos</h3>
                         <div class="col-md-12 well">
-                            <form action="" method="post">
+                            <form action="CarregarVendaPorProduto" method="post">
                                 <div class="col-md-6">
                                     <select name="tipoP" class="form-control">
-                                        <option value="default" selected="selected" disabled>Selecione</option>
                                         <option value="audio">Audio</option>
                                         <option value="cordas">Cordas</option>
                                         <option value="percurssao">Percurssão</option>
@@ -69,42 +66,38 @@
                         </div>
                     </div>
                     <hr>
-                    
+
                     <div id="page-content-wrapper">
                         <div class="container-fluid">                 
                             <table class="table table-striped table-hover table-users">
                                 <thead>
                                     <tr>
 
-                                        <th>ID</th>
-                                        <th>Cod</th>
+                                        <th>Nome do Funcionario</th>
+                                        <th>Filial</th>
                                         <th>Nome do Produto</th>
-                                        <th>Fabricante</th>
-                                        <th>Tipo</th>
-                                        <th>Cor</th>
-                                        <th>Valor</th>
-                                        <th>Modelo</th>
-                                        <th>Quantidade</th>
-                                        <th></th>
+                                        <th>Tipo do Produto</th>
+                                        <th>Quantidade de Saída</th>
+                                        <th>Valor da Venda</th>
+                                        <th>Data da Venda</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
 
-                                <c:forEach items="${produtos}" var="produto">
+                                <c:forEach items="${vendas}" var="vendas">
                                     <tr>
-                                        <td><c:out value="${produto.idProduto}" /></td>
-                                    <td><c:out value="${produto.codProduto}" /></td>
-                                    <td><c:out value="${produto.nomeProduto}" /></td>
-                                    <td><c:out value="${produto.fabricanteProduto}" /></td>
-                                    <td><c:out value="${produto.tipoProduto}" /></td>
-                                    <td><c:out value="${produto.corProduto}" /></td>
-                                    <td><c:out value="${produto.valorProduto}" /></td>
-                                    <td><c:out value="${produto.modeloProduto}" /></td>
-                                    <td><c:out value="${produto.qntProduto}" /></td>
+                                        <td><c:out value="${vendas.nomeFuncionario}" /></td>
+                                    <td><c:out value="${vendas.filialFuncionario}" /></td>
+                                    <td><c:out value="${vendas.nomeProduto}" /></td>
+                                    <td><c:out value="${vendas.tipoProduto}" /></td>
+                                    <td><c:out value="${vendas.qntVendas}" /></td>
+                                    <td><c:out value="R$ ${vendas.valorVendas}" /></td>
+                                    <td><c:out value="${vendas.dataVendas}" /></td>
                                     </tr>
                                 </c:forEach>
+
                                 </tbody>
                             </table>
                         </div>
