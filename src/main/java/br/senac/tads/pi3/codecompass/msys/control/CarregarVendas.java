@@ -5,15 +5,11 @@
  */
 package br.senac.tads.pi3.codecompass.msys.control;
 
-import br.senac.tads.pi3.codecompass.msys.DAO.GenericDAO;
 import br.senac.tads.pi3.codecompass.msys.DAO.VendasDAO;
 import br.senac.tads.pi3.codecompass.msys.model.Vendas;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author user
  */
-@WebServlet(name = "EfetuarVenda", urlPatterns = {"/EfetuarVenda"})
-public class EfetuarVenda extends HttpServlet {
+@WebServlet(name = "CarregarVendas", urlPatterns = {"/CarregarVendas"})
+public class CarregarVendas extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,60 +35,21 @@ public class EfetuarVenda extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        Integer qntProduto = Integer.parseInt(request.getParameter("qntP"));
-        Integer qntSolicitada = Integer.parseInt(request.getParameter("Quantidade"));
-
-        String mensagem = null;
-
-        if (qntSolicitada <= qntProduto) {
-
-            Double valorProduto = Double.parseDouble(request.getParameter("valorP"));
-            String dtVendaStr = "2010-01-01";
-            int idProduto = Integer.parseInt(request.getParameter("idProduto"));
-            int idFuncionario = 1;
-            Double valorVenda = valorProduto * qntSolicitada;
-
-            DateFormat formatadorData = new SimpleDateFormat("dd/MM/yyyy");
-            Date dtVenda = null;
-            try {
-                dtVenda = formatadorData.parse(dtVendaStr);
-            } catch (ParseException ex) {
-                dtVenda = new Date();
-            }
-
-            Vendas venda = new Vendas();
-
-            venda.setDataVendas(dtVenda);
-            venda.setIdFuncionario(idProduto);
-            venda.setIdProduto(idProduto);
-            venda.setValorVendas(valorVenda);
-            venda.setQntVendas(qntSolicitada);
-
-            try {
-                VendasDAO dao = new VendasDAO();
-                if (dao.cadastrar(venda)) {
-                    mensagem = "Produto vendido com sucesso!!";
-
-                } else {
-                    mensagem = "Problemas ao cadastrar Produto";
-                }
-
-                request.setAttribute("mensagem", mensagem);
-                RequestDispatcher rd = request.getRequestDispatcher("/RetirarDoEstoque");
-                rd.forward(request, response);
-            } catch (Exception ex) {
-                System.out.println("Problemas no Servlet ao cadastrar produto! Erro: " + ex.getMessage());
-                ex.printStackTrace();
-            }
-
-        } else {
-            mensagem = "Esta quantidade não possui em estoque";
-            request.setAttribute("mensagem", mensagem);
-            RequestDispatcher rd = request.getRequestDispatcher("/CadastrarVenda.jsp");
+        
+        try {
+            VendasDAO dao = new VendasDAO();
+            List<Vendas> listaVendas = dao.relatorio();
+            request.setAttribute("vendas", listaVendas);
+            RequestDispatcher rd = request.getRequestDispatcher("/RelatorioFilial.jsp");
             rd.forward(request, response);
-        }
 
+        } catch (Exception ex) {
+            System.out.println("Problemas ao listar Produto! Erro: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+        
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

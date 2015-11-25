@@ -39,7 +39,7 @@
                         <a href="">Relatório de vendas</a>
                     </li>
                     <li>
-                        <a href="RelatorioFilial.jsp">Relatório de Filial</a>
+                        <a href="CarregarVendas">Relatório de Filial</a>
                     </li>
                     <li>
                         <a href="RelatorioProduto.jsp">Relatório de Produto</a>

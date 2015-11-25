@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -53,9 +55,9 @@
                     <div class="row">
                         <h3 class="well">Quantidade de produtos vendidos por Filial</h3>
                         <div class="col-md-12 well">
-                            <form action="" method="post">
+                            <form action="CarregarVendasPorFilial" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" name="idF" value="" placeholder="Nome da Filial" class="form-control search-query" autofocus>
+                                    <input type="text" name="filial" value="" placeholder="Nome da Filial" class="form-control search-query" autofocus>
                                 </div>
                                 <div class="col-md-6">
                                     <button  type="submit" class="btn btn-default">Buscar Produtos</button>
@@ -71,15 +73,13 @@
                             <thead>
                                 <tr>
 
-                                    <th>ID</th>
-                                    <th>Cod</th>
+                                    <th>Nome do Funcionario</th>
+                                    <th>Filial</th>
                                     <th>Nome do Produto</th>
-                                    <th>Fabricante</th>
-                                    <th>Tipo</th>
-                                    <th>Cor</th>
-                                    <th>Valor</th>
-                                    <th>Modelo</th>
-                                    <th>Quantidade</th>
+                                    <th>Tipo do Produto</th>
+                                    <th>Quantidade de Saída</th>
+                                    <th>Valor da Venda</th>
+                                    <th>Data da Venda</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -87,19 +87,18 @@
                             <tbody>
 
 
-                            <c:forEach items="${produtos}" var="produto">
+                            <c:forEach items="${vendas}" var="vendas">
                                 <tr>
-                                    <td><c:out value="${produto.idProduto}" /></td>
-                                <td><c:out value="${produto.codProduto}" /></td>
-                                <td><c:out value="${produto.nomeProduto}" /></td>
-                                <td><c:out value="${produto.fabricanteProduto}" /></td>
-                                <td><c:out value="${produto.tipoProduto}" /></td>
-                                <td><c:out value="${produto.corProduto}" /></td>
-                                <td><c:out value="${produto.valorProduto}" /></td>
-                                <td><c:out value="${produto.modeloProduto}" /></td>
-                                <td><c:out value="${produto.qntProduto}" /></td>
+                                    <td><c:out value="${vendas.nomeFuncionario}" /></td>
+                                    <td><c:out value="${vendas.filialFuncionario}" /></td>
+                                    <td><c:out value="${vendas.nomeProduto}" /></td>
+                                    <td><c:out value="${vendas.tipoProduto}" /></td>
+                                    <td><c:out value="${vendas.qntVendas}" /></td>
+                                    <td><c:out value="${vendas.valorVendas}" /></td>
+                                    <td><c:out value="${vendas.dataVendas}" /></td>
                                 </tr>
                             </c:forEach>
+                            
                             </tbody>
                         </table>
                     </div>
