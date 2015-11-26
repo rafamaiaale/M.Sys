@@ -33,12 +33,12 @@
                         <h1 class="text-center">Área Exclusiva</h1>
                     </div>
                     <div class="modal-body">
-                        <form class="form col-md-12 center-block">
+                        <form method="post" action="Login" class="form col-md-12 center-block">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Login" required/>
+                                <input type="text" id="login" name="login" class="form-control" placeholder="Login" required/>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Senha" required/>
+                                <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required/>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
