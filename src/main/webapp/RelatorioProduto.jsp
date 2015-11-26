@@ -32,7 +32,7 @@
                         <a href="MenuVenda.jsp">Gestão de Vendas</a>
                     </li>
                     <li>
-                        <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
+                        <a href="CarregarFuncionariosVenda">Cadastrar Vendas</a>
                     </li>
                     <li>
                         <a href="CarregarVendas">Relatório de Filial</a>

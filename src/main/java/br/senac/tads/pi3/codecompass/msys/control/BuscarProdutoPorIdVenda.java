@@ -49,7 +49,7 @@ public class BuscarProdutoPorIdVenda extends HttpServlet {
             ex.printStackTrace();
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("CadastrarVenda.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("CarregarFuncionariosVenda");
         rd.forward(request, response);
 
         

@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +33,7 @@
                         <a href="MenuVenda.jsp">Gestão de Vendas</a>
                     </li>
                     <li>
-                        <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
+                        <a href="CarregarFuncionariosVenda">Cadastrar Vendas</a>
                     </li>
                     <li>
                         <a href="">Relatório de vendas</a>
@@ -51,9 +53,9 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <div class="row">
-                                            <!-- Alert --> 
-                    <div id="true" class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
-                    <div id="false" class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente!</div>
+                        <!-- Alert --> 
+                        <div id="true" class="alert alert-success" role="alert">Cadastro Efetuado com sucesso!</div>
+                        <div id="false" class="alert alert-danger" role="alert">Erro ao cadastrar Usuário, tente novamente!</div>
 
                         <h3 class="well">Registrar Vendas</h3>
                         <div class="col-md-12 well">
@@ -93,6 +95,14 @@
                             <div class="col-md-6 form-group">
                                 <label for="model"><b>Quantidade em Estoque</b></label>
                                 <input type="text" class="form-control" id="qntP" name="qntP" readonly="readonly" value="${produto.qntProduto}" maxlength="100" required/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="funcionario"><b>Funcionário que Efetuou a venda</b></label>
+                                <select name="funcionario" class="form-control" required>
+                                    <c:forEach items="${funcionarios}" var="funcionarios">
+                                        <option value="${funcionarios.idFuncionario}">${funcionarios.nomeFuncionario}</option>
+                                    </c:forEach>    
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="model"><b>Quantidade Solicitada</b></label>

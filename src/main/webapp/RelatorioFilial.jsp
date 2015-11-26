@@ -30,7 +30,7 @@
                 <ul class="sidebar-nav">
                     <!-- Vendas -->
                     <li class="sidebar-brand">
-                        <a href="MenuVenda.jsp">Gestão de Vendas</a>
+                        <a href="CarregarFuncionariosVenda">Gestão de Vendas</a>
                     </li>
                     <li>
                         <a href="CadastrarVenda.jsp">Cadastrar Vendas</a>
