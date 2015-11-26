@@ -36,6 +36,8 @@ public class AlterarProduto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        // PEGANDO OS PARAMETROS QUE VEM DA JSP PARA SALVAR NO BANCO.
+        
         String mensagem=null;
         Integer codProduto = Integer.parseInt(request.getParameter("codP"));
         String nomeProduto = request.getParameter("nameP");
@@ -46,7 +48,11 @@ public class AlterarProduto extends HttpServlet {
         Double valorProduto = Double.parseDouble(request.getParameter("valP"));
         Integer qntProduto = Integer.parseInt(request.getParameter("quanP"));
         
+        // CRIANDO OBJETO QUE SERÁ SALVO
+        
         Produto produto = new Produto();
+        
+        // ATRIBUINDO OS VALORES A ELE
         
         produto.setCodProduto(codProduto);
         produto.setNomeProduto(nomeProduto);
@@ -57,16 +63,18 @@ public class AlterarProduto extends HttpServlet {
         produto.setValorProduto(valorProduto);
         produto.setQntProduto(qntProduto);
         
+        // FAZENDO A CONEXÃO COM A DAO, PARA REALIZAR A OPERAÇÃO NO BANCO DE DADOS
+        
         try{
             GenericDAO dao = new ProdutoDAO();
-            if(dao.alterar(produto)){
-                mensagem="Produto cadastrado com sucesso!!";
+            if(dao.alterar(produto)){ 
+                mensagem="Produto cadastrado com sucesso!!"; // SE DER CERTO
             }
             else{
-                mensagem="Problemas ao cadastrar Produto";
+                mensagem="Problemas ao cadastrar Produto"; // CASO DE ERRADO
             }
-            request.setAttribute("mensagem", mensagem);
-            RequestDispatcher rd = request.getRequestDispatcher("/MenuProduto.jsp");
+            request.setAttribute("mensagem", mensagem); 
+            RequestDispatcher rd = request.getRequestDispatcher("/MenuProduto.jsp"); // MANDANDO PARA O MENU APÓS A OPERAÇÃO NO BANCO
             rd.forward(request, response);
         }
         catch (Exception ex){
