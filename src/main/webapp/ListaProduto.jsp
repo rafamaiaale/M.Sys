@@ -80,7 +80,6 @@
                                     <td><c:out value="${produto.valorProduto}" /></td>
                                     <td><c:out value="${produto.modeloProduto}" /></td>
                                     <td><c:out value="${produto.qntProduto}" /></td>
-                                    <td><a class="btn btn-default" href="BuscarPorIdProduto" id="botaoEditar">Editar</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

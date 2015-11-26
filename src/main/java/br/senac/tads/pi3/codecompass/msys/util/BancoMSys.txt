@@ -13,7 +13,7 @@ CREATE TABLE Produto (
 )
 
 INSERT INTO Produto (Cod_Produto, Nome_Produto, Tipo_Produto, Cor_Produto, Valor_Produto, Fabricante_Produto, Modelo_Produto, Qnt_Produto)
-values (1, 'Violão Giannini GSF1R', 'Cordas', 'Preto', 150.00, 'Giannini', 'Violão', 10)
+values (1, 'Violão Giannini GSF1R', 'cordas', 'Preto', 150.00, 'Giannini', 'Violão', 10)
 
 CREATE TABLE Funcionario (
 
@@ -42,6 +42,7 @@ CREATE TABLE VENDAS (
 	ID_VENDA BIGINT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) CONSTRAINT PK_VENDAS PRIMARY KEY,
 	VALOR_VENDA DOUBLE NOT NULL,
 	DATA_VENDA DATE NOT NULL,
+        QNT_VENDA INT NOT NULL,
         ID_PRODUTO BIGINT NOT NULL,
         ID_FUNCIONARIO BIGINT NOT NULL
 
